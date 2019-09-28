@@ -8,4 +8,4 @@ Please see static/rubric.pdf for full assignment details.
 In order to run the app locally:
 # npm install 
 
-# npm run dev# 2tr-now
+# npm run dev
