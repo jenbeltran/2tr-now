@@ -1725,8 +1725,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _partials_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../partials/Navbar */ "./partials/Navbar.js");
-/* harmony import */ var _partials_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../partials/Footer */ "./partials/Footer.js");
+/* harmony import */ var _static_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/Navbar */ "./static/Navbar.js");
+/* harmony import */ var _static_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../static/Footer */ "./static/Footer.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
 
@@ -1789,25 +1789,39 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 28
       },
       __self: this
-    })), __jsx(_partials_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }), __jsx("link", {
+      href: "/static/styles.css",
+      rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 29
       },
       __self: this
-    }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 31
       },
       __self: this
-    })), __jsx(_partials_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_static_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 32
       },
       __self: this
-    }));
+    }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    })), __jsx(_static_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    })));
   }
 
 }
@@ -1816,10 +1830,10 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 
 /***/ }),
 
-/***/ "./partials/Footer.js":
-/*!****************************!*\
-  !*** ./partials/Footer.js ***!
-  \****************************/
+/***/ "./static/Footer.js":
+/*!**************************!*\
+  !*** ./static/Footer.js ***!
+  \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1827,7 +1841,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/partials/Footer.js";
+var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/static/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1849,10 +1863,10 @@ const Footer = () => __jsx("div", {
 
 /***/ }),
 
-/***/ "./partials/Navbar.js":
-/*!****************************!*\
-  !*** ./partials/Navbar.js ***!
-  \****************************/
+/***/ "./static/Navbar.js":
+/*!**************************!*\
+  !*** ./static/Navbar.js ***!
+  \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1860,7 +1874,7 @@ const Footer = () => __jsx("div", {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/partials/Navbar.js";
+var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/static/Navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 

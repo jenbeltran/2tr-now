@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
-import Navbar from '../partials/Navbar';
-import Footer from '../partials/Footer';
+import Navbar from '../static/Navbar';
+import Footer from '../static/Footer';
 import Head from 'next/head';
 
 class MyApp extends App {
@@ -26,10 +26,13 @@ class MyApp extends App {
 						crossorigin="anonymous"
 					/>
 					<link href="https://fonts.googleapis.com/css?family=Passion+One&display=swap" rel="stylesheet" />
+					<link href="/static/styles.css" rel="stylesheet" />
 				</Head>
-				<Navbar />
-				<Component {...pageProps} />
-				<Footer />
+				<body>
+					<Navbar />
+					<Component {...pageProps} />
+					<Footer />
+				</body>
 			</div>
 		);
 	}
