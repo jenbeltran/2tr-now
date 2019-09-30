@@ -2,6 +2,7 @@ import { Button } from 'reactstrap';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
 import SpecialtyBusiness from '../components/SpecialtyBusiness';
+import Modal from '../components/Modal';
 
 const TutorRegister = () => (
 	<div className="Register-div">
@@ -33,7 +34,7 @@ const TutorRegister = () => (
 				</td>
 				<td className="Register-record">
 					<p className="Register-p">Criminal Record:</p>
-					<Button outline>Upload</Button>
+					<Modal />
 				</td>
 			</tr>
 			<tr>
