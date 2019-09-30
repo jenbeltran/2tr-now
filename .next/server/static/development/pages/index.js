@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -127,6 +127,7 @@ const Index = () => __jsx("div", {
 }, "Simply register an account, login, and get matched with a tutor specifically suited to your needs."), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
   className: "Index-button",
   outline: true,
+  href: "register",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
@@ -138,7 +139,7 @@ const Index = () => __jsx("div", {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

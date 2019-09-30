@@ -4,10 +4,11 @@ body {
 	position: absolute;
 	background-image: url("plant.jpg");
 	background-size: 100%;
+	font-family: Pontano Sans;
 }
 
 .Footer {
 	position: absolute;
-	top: 90%;
+	top: 95%;
 	left: 39%;
 }

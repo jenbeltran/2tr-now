@@ -15407,6 +15407,7 @@ var Index = function Index() {
   }, "Simply register an account, login, and get matched with a tutor specifically suited to your needs."), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
     className: "Index-button",
     outline: true,
+    href: "register",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -15419,7 +15420,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjenbeltran%2FDesktop%2F2tr-now%2Fpages%2Findex.js ***!
   \*****************************************************************************************************************************/
@@ -15442,5 +15443,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

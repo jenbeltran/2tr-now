@@ -161,6 +161,7 @@ const Navbar = () => __jsx("div", {
 }, "2TR-Now"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
   className: "Navbar-button1",
   outline: true,
+  href: "/",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
@@ -169,6 +170,7 @@ const Navbar = () => __jsx("div", {
 }, "Sign In"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
   className: "Navbar-button2",
   outline: true,
+  href: "register",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8
@@ -1908,28 +1910,36 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 32
       },
       __self: this
-    })), __jsx("body", {
+    }), __jsx("link", {
+      href: "/static/login.css",
+      rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 33
       },
       __self: this
-    }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 35
       },
       __self: this
-    }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 36
       },
       __self: this
-    })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 37
+      },
+      __self: this
+    })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
       },
       __self: this
     })));

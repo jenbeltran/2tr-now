@@ -1,0 +1,61 @@
+.Login-h1 {
+	position: absolute;
+	left: 13.05%;
+	right: 60.79%;
+	top: 20.68%;
+	bottom: 64.34%;
+}
+
+.Login-div {
+	position: absolute;
+	left: 10.05%;
+	top: 30.68%;
+	bottom: 64.34%;
+}
+
+.Login-p {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.Login-input {
+	margin-right: 70%;
+	padding-right: 70%;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px grey;
+}
+
+.Login-a {
+	color: #707070;
+}
+
+.Login-button1 {
+	border-color: #265231;
+	color: #265231;
+	position: absolute;
+	left: 17%;
+	top: 53%;
+	margin-left: 25px;
+	padding-left: 25px;
+	margin-right: 25px;
+	padding-right: 25px;
+}
+
+.Login-h4 {
+	position: absolute;
+	left: 13.05%;
+	top: 65.68%;
+	color: #265231;
+}
+
+.Login-button2 {
+	border-color: #265231;
+	color: #265231;
+	position: absolute;
+	left: 15%;
+	top: 70%;
+	margin-left: 25px;
+	padding-left: 25px;
+	margin-right: 25px;
+	padding-right: 25px;
+}

@@ -30,6 +30,7 @@ class MyApp extends App {
 					<link href="/static/all.css" rel="stylesheet" />
 					<link href="/static/navbar.css" rel="stylesheet" />
 					<link href="/static/index.css" rel="stylesheet" />
+					<link href="/static/login.css" rel="stylesheet" />
 				</Head>
 				<body>
 					<Navbar />
