@@ -1,56 +1,49 @@
 import { Button } from 'reactstrap';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
-import Date from '../components/Date';
-import Month from '../components/Month';
-import Year from '../components/Year';
+import SpecialtyBusiness from '../components/SpecialtyBusiness';
 
 const TutorRegister = () => (
-	<div className="StudentRegister-div">
+	<div className="Register-div">
 		<table>
 			<tr>
 				<td>
-					<p className="StudentRegister-p">First Name:</p>
+					<p className="Register-p">First Name:</p>
 					<input type="text" />
 				</td>
 				<td>
-					<p className="StudentRegister-p">Last Name:</p>
+					<p className="Register-p">Last Name:</p>
 					<input type="text" />
 				</td>
 			</tr>
 		</table>
 
-		<p className="StudentRegister-p">Date of Birth:</p>
-		<table>
-			<tr>
-				<td>
-					<Date />
-				</td>
-				<td>
-					<Month />
-				</td>
-				<td>
-					<Year />
-				</td>
-			</tr>
-		</table>
-
-		<p className="StudentRegister-p">Email:</p>
+		<p className="Register-p">Email:</p>
 		<input type="email" />
-		<p className="StudentRegister-p">Password:</p>
+		<p className="Register-p">Password:</p>
 		<input type="password" />
-		<p className="StudentRegister-p">Re-enter Password:</p>
+		<p className="Register-p">Re-enter Password:</p>
 		<input type="password" />
 
 		<table>
 			<tr>
 				<td>
-					<p className="StudentRegister-p">Location:</p>
+					<p className="Register-p">Location:</p>
 					<Countries />
 				</td>
+				<td className="Register-record">
+					<p className="Register-p">Criminal Record:</p>
+					<Button outline>Upload</Button>
+				</td>
+			</tr>
+			<tr>
 				<td>
-					<p className="StudentRegister-p">Program:</p>
+					<p className="Register-p">Program:</p>
 					<Programs />
+				</td>
+				<td>
+					<p className="Register-p">Specialty:</p>
+					<SpecialtyBusiness />
 				</td>
 			</tr>
 		</table>

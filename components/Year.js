@@ -1,6 +1,6 @@
 const Year = () => (
 	<div className="StudentRegister-year">
-		<select name="dob-year" class="datefield year">
+		<select>
 			<option value="">Year</option>
 			<option value="2012">2012</option>
 			<option value="2011">2011</option>
