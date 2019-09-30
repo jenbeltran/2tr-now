@@ -16,7 +16,7 @@ const Login = () => (
 			Login
 		</Button>
 		<h4 className="Login-h4">Don't have an account yet?</h4>
-		<Button className="Login-button2" outline>
+		<Button className="Login-button2" outline href="register">
 			Create Account
 		</Button>
 	</div>

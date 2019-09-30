@@ -70,7 +70,7 @@ var Navbar = function Navbar() {
   }, "2TR-Now"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
     className: "Navbar-button1",
     outline: true,
-    href: "/",
+    href: "/login",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -24612,7 +24612,7 @@ function (_App) {
         rel: "stylesheet",
         href: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
         integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
-        crossorigin: "anonymous",
+        crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
@@ -24666,28 +24666,36 @@ function (_App) {
           lineNumber: 33
         },
         __self: this
-      })), __jsx("body", {
+      }), __jsx("link", {
+        href: "/static/register.css",
+        rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         },
         __self: this
-      }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), __jsx("body", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 36
         },
         __self: this
-      }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
+      }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 37
         },
         __self: this
-      })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
+        },
+        __self: this
+      })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
         },
         __self: this
       })));

@@ -1,0 +1,25 @@
+.Register-student {
+	position: absolute;
+	left: 4.05%;
+}
+
+.Register-tutor {
+	position: absolute;
+	left: 12.05%;
+}
+
+.StudentRegister-div {
+	position: absolute;
+	left: 3.97%;
+	right: 75.47%;
+	top: 25.3%;
+	bottom: 50.68%;
+	opacity: 1;
+}
+
+.StudentRegister-p {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-top: 3%;
+	padding-top: 3%;
+}
