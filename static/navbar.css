@@ -1,0 +1,23 @@
+.Navbar-h1 {
+	font-family: Amatic SC;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 75px;
+	color: #265231;
+}
+
+.Navbar-button1 {
+	border-color: #265231;
+	color: #265231;
+	position: absolute;
+	left: 84.24%;
+	top: 4%;
+}
+
+.Navbar-button2 {
+	border-color: #265231;
+	color: #265231;
+	position: absolute;
+	left: 91.24%;
+	top: 4%;
+}

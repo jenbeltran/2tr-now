@@ -1,6 +1,12 @@
+import { Button } from 'reactstrap';
 const Index = () => (
 	<div>
-		<h1>Testing</h1>
+		<h1 className="Index-h1">
+			Simply register an account, login, and get matched with a tutor specifically suited to your needs.
+		</h1>
+		<Button className="Index-button" outline>
+			Create an Account
+		</Button>
 	</div>
 );
 

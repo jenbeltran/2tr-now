@@ -1,7 +1,13 @@
 body {
 	height: 100%;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	background-image: url("plant.jpg");
 	background-size: 100%;
+}
+
+.Footer {
+	position: absolute;
+	top: 90%;
+	left: 39%;
 }

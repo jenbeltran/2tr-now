@@ -1,6 +1,6 @@
 const Navbar = () => (
 	<div>
-		<h1>Navbar goes here</h1>
+		<h1>Student Nav</h1>
 	</div>
 );
 
