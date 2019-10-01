@@ -2,6 +2,7 @@ import { Button } from 'reactstrap';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
 import SpecialtyBusiness from '../components/SpecialtyBusiness';
+import SpecialtyMath from '../components/SpecialtyMath';
 import Modal from '../components/Modal';
 
 const TutorRegister = () => (
@@ -49,7 +50,9 @@ const TutorRegister = () => (
 			</tr>
 		</table>
 		<br />
-		<Button outline>Register</Button>
+		<Button outline href="tutor_dashboard">
+			Register
+		</Button>
 	</div>
 );
 

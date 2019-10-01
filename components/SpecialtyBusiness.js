@@ -1,4 +1,4 @@
-const Specialty = () => (
+const SpecialtyBusiness = () => (
 	<div>
 		<select>
 			<option value="selecting">Select a Specialty</option>
@@ -10,4 +10,4 @@ const Specialty = () => (
 		</select>
 	</div>
 );
-export default Specialty;
+export default SpecialtyBusiness;

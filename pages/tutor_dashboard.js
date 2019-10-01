@@ -1,8 +1,6 @@
-import TutorRegister from '../components/TutorRegister';
-
-const Register = () => (
+const TutorDashboard = () => (
 	<div>
-		<h1 className="Register-h1">Register a new account!</h1>
+		<h1 className="Register-h1">Tutor TutorDashboard</h1>
 		<div className="Register-student">
 			<input type="radio" />
 			<label htmlFor="student">Student?</label>
@@ -11,8 +9,7 @@ const Register = () => (
 			<input type="radio" />
 			<label htmlFor="tutor">Tutor?</label>
 		</div>
-		<TutorRegister />
 	</div>
 );
 
-export default Register;
+export default TutorDashboard;

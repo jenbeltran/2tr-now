@@ -1,6 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Navbar from '../components/Navbar';
+import StudentNavbar from '../components/StudentNavbar';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 
@@ -34,7 +35,7 @@ class MyApp extends App {
 					<link href="/static/register.css" rel="stylesheet" />
 				</Head>
 				<body>
-					<Navbar />
+					<StudentNavbar />
 					<Component {...pageProps} />
 					<Footer />
 				</body>

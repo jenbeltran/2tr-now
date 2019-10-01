@@ -92,6 +92,191 @@ var Navbar = function Navbar() {
 
 /***/ }),
 
+/***/ "./components/StudentNavbar.js":
+/*!*************************************!*\
+  !*** ./components/StudentNavbar.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/StudentNavbar.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+var StudentNavbar = function StudentNavbar(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      dropdown = _useState[0],
+      setDropdown = _useState[1];
+
+  var handleToggle = function handleToggle() {
+    setDropdown(!dropdown);
+  };
+
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"], {
+    color: "light",
+    light: true,
+    expand: "md",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarBrand"], {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "Navbar-brand",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, "2TR-Now")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarToggler"], {
+    onClick: handleToggle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Collapse"], {
+    isOpen: dropdown,
+    navbar: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+    className: "ml-auto",
+    navbar: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    className: "StudentNavbar-link",
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, "Home")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    className: "StudentNavbar-link",
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, "Create New Request")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    className: "StudentNavbar-link",
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, "View Pending Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    className: "StudentNavbar-link",
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, "Completed Sessions")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    className: "StudentNavbar-link",
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, "View Profile")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledDropdown"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownToggle"], {
+    id: "StudentNavbar-welcome",
+    nav: true,
+    caret: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, "Welcome, Sydney!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
+    right: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, "Logout")))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (StudentNavbar);
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
@@ -24560,9 +24745,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_StudentNavbar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/StudentNavbar */ "./components/StudentNavbar.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
@@ -24573,6 +24759,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
 
 
 
@@ -24599,13 +24786,13 @@ function (_App) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 21
         },
         __self: this
-      }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_13___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
       }, __jsx("link", {
@@ -24615,7 +24802,7 @@ function (_App) {
         crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         },
         __self: this
       }), __jsx("link", {
@@ -24623,7 +24810,7 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 29
         },
         __self: this
       }), __jsx("link", {
@@ -24631,7 +24818,7 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         },
         __self: this
       }), __jsx("link", {
@@ -24639,7 +24826,7 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         },
         __self: this
       }), __jsx("link", {
@@ -24647,7 +24834,7 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         },
         __self: this
       }), __jsx("link", {
@@ -24655,7 +24842,7 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }), __jsx("link", {
@@ -24663,7 +24850,7 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }), __jsx("link", {
@@ -24671,31 +24858,31 @@ function (_App) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 35
         },
         __self: this
       })), __jsx("body", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 37
         },
         __self: this
-      }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
+      }, __jsx(_components_StudentNavbar__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
         },
         __self: this
-      })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 39
+        },
+        __self: this
+      })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
         },
         __self: this
       })));

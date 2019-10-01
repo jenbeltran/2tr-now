@@ -1,8 +1,9 @@
+/* When user is not logged in yet */
 .Navbar-h1 {
 	font-family: Amatic SC;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 75px;
+	font-size: 60px;
 	color: #265231;
 }
 
@@ -20,4 +21,36 @@
 	position: absolute;
 	left: 91.24%;
 	top: 4%;
+}
+
+/* When user is logged in */
+.Navbar-brand {
+	font-family: Amatic SC;
+	font-size: 40px;
+	font-weight: bold;
+	color: #265231;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+/* Student Navbar links */
+.StudentNavbar-link {
+	font-size: 17px;
+	font-weight: bold;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#StudentNavbar-welcome {
+	font-size: 19px;
+	font-weight: bold;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: #265231;
 }

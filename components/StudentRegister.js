@@ -55,7 +55,9 @@ const StudentRegister = () => (
 			</tr>
 		</table>
 		<br />
-		<Button outline>Register</Button>
+		<Button outline href="student_dashboard">
+			Register
+		</Button>
 	</div>
 );
 
