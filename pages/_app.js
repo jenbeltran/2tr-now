@@ -2,6 +2,7 @@ import React from 'react';
 import App from 'next/app';
 import Navbar from '../components/Navbar';
 import StudentNavbar from '../components/StudentNavbar';
+import TutorNavbar from '../components/TutorNavbar';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 
@@ -33,9 +34,11 @@ class MyApp extends App {
 					<link href="/static/index.css" rel="stylesheet" />
 					<link href="/static/login.css" rel="stylesheet" />
 					<link href="/static/register.css" rel="stylesheet" />
+					<link href="/static/dashboard.css" rel="stylesheet" />
+					<link href="/static/profile.css" rel="stylesheet" />
 				</Head>
 				<body>
-					<StudentNavbar />
+					<TutorNavbar />
 					<Component {...pageProps} />
 					<Footer />
 				</body>

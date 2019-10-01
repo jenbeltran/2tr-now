@@ -14,7 +14,7 @@ import {
 	DropdownItem
 } from 'reactstrap';
 
-const StudentNavbar = (props) => {
+const TutorNavbar = (props) => {
 	const [ dropdown, setDropdown ] = useState(false);
 
 	const handleToggle = () => {
@@ -30,13 +30,8 @@ const StudentNavbar = (props) => {
 				<Collapse isOpen={dropdown} navbar>
 					<Nav className="ml-auto" navbar>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/student_dashboard">
+							<NavLink className="Navbar-link" href="/tutor_dashboard">
 								Dashboard
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink className="Navbar-link" href="/">
-								Create New Request
 							</NavLink>
 						</NavItem>
 						<NavItem>
@@ -51,10 +46,10 @@ const StudentNavbar = (props) => {
 						</NavItem>
 						<UncontrolledDropdown>
 							<DropdownToggle id="Navbar-welcome" nav caret>
-								Welcome, Sydney!
+								Welcome, Mike!
 							</DropdownToggle>
 							<DropdownMenu right>
-								<DropdownItem href="/student_profile">View Profile</DropdownItem>
+								<DropdownItem href="/tutor_profile">View Profile</DropdownItem>
 								<DropdownItem href="/">Logout</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>
@@ -65,4 +60,4 @@ const StudentNavbar = (props) => {
 	);
 };
 
-export default StudentNavbar;
+export default TutorNavbar;

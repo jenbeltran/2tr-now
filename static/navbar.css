@@ -35,8 +35,7 @@
 	padding-bottom: 0;
 }
 
-/* Student Navbar links */
-.StudentNavbar-link {
+.Navbar-link {
 	font-size: 17px;
 	font-weight: bold;
 	margin-top: 0;
@@ -45,8 +44,8 @@
 	padding-bottom: 0;
 }
 
-#StudentNavbar-welcome {
-	font-size: 19px;
+#Navbar-welcome {
+	font-size: 20px;
 	font-weight: bold;
 	margin-top: 0;
 	padding-top: 0;

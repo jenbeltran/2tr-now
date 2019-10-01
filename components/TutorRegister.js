@@ -5,7 +5,7 @@ import SpecialtyBusiness from '../components/SpecialtyBusiness';
 import SpecialtyMath from '../components/SpecialtyMath';
 import Modal from '../components/Modal';
 
-const TutorRegister = () => (
+const TutorRegister = (props) => (
 	<div className="Register-div">
 		<table>
 			<tr>
@@ -35,7 +35,7 @@ const TutorRegister = () => (
 				</td>
 				<td className="Register-record">
 					<p className="Register-p">Criminal Record:</p>
-					<Modal />
+					<Modal modalButton={'Upload'} modalBody={'Please upload your criminal record'} modalHeader={'Criminal Record'} />
 				</td>
 			</tr>
 			<tr>

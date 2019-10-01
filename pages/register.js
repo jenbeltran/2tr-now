@@ -2,7 +2,7 @@ import TutorRegister from '../components/TutorRegister';
 
 const Register = () => (
 	<div>
-		<h1 className="Register-h1">Register a new account!</h1>
+		<h1>Register a new account!</h1>
 		<div className="Register-student">
 			<input type="radio" />
 			<label htmlFor="student">Student?</label>

@@ -12,14 +12,14 @@ const ModalTemplate = (props) => {
 	return (
 		<div>
 			<Button outline onClick={handleToggle}>
-				Upload
+				{props.modalButton}
 			</Button>
 			<Modal isOpen={modal} toggle={handleToggle}>
-				<ModalHeader toggle={handleToggle}>Criminal Record Upload</ModalHeader>
-				<ModalBody>Please attach your criminal record</ModalBody>
+				<ModalHeader toggle={handleToggle}>{props.modalHeader}</ModalHeader>
+				<ModalBody>{props.modalBody}</ModalBody>
 				<ModalFooter>
 					<Button color="primary" onClick={handleToggle}>
-						Upload
+						Submit
 					</Button>{' '}
 					<Button color="secondary" onClick={handleToggle}>
 						Cancel
