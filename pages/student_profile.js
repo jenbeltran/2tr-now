@@ -9,7 +9,11 @@ const StudentProfile = () => (
 		<table className="Dashboard-table">
 			<tr>
 				<td>
-					<img src={Placeholder} alt="placeholder" width="125px;" />
+					<Modal
+						modalButton={<img src={Placeholder} alt="placeholder" width="125px;" />}
+						modalHeader={'Profile Photo Upload'}
+						modalBody={'Please upload a profile photo'}
+					/>
 				</td>
 				<td>
 					<h1>Sydney White</h1>

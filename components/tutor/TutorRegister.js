@@ -1,9 +1,9 @@
 import { Button } from 'reactstrap';
-import Countries from '../components/Countries';
-import Programs from '../components/Program';
-import SpecialtyBusiness from '../components/SpecialtyBusiness';
-import SpecialtyMath from '../components/SpecialtyMath';
-import Modal from '../components/Modal';
+import Countries from '../Countries';
+import Programs from '../Program';
+import SpecialtyBusiness from '../specialty/SpecialtyBusiness';
+import SpecialtyMath from '../specialty/SpecialtyMath';
+import Modal from '../Modal';
 
 const TutorRegister = (props) => (
 	<div className="Register-div">
@@ -35,7 +35,11 @@ const TutorRegister = (props) => (
 				</td>
 				<td className="Register-record">
 					<p className="Register-p">Criminal Record:</p>
-					<Modal modalButton={'Upload'} modalBody={'Please upload your criminal record'} modalHeader={'Criminal Record'} />
+					<Modal
+						modalButton={'Upload'}
+						modalBody={'Please upload your criminal record'}
+						modalHeader={'Criminal Record'}
+					/>
 				</td>
 			</tr>
 			<tr>

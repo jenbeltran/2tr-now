@@ -1,9 +1,9 @@
 import { Button } from 'reactstrap';
-import Countries from '../components/Countries';
-import Programs from '../components/Program';
-import Date from '../components/Date';
-import Month from '../components/Month';
-import Year from '../components/Year';
+import Countries from '../Countries';
+import Programs from '../Program';
+import Date from '../date_dropdowns/Date';
+import Month from '../date_dropdowns/Month';
+import Year from '../date_dropdowns/Year';
 
 const StudentRegister = () => (
 	<div className="Register-div">

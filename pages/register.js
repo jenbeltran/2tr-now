@@ -1,4 +1,4 @@
-import TutorRegister from '../components/TutorRegister';
+import StudentRegister from '../components/student/StudentRegister';
 
 const Register = () => (
 	<div>
@@ -11,7 +11,7 @@ const Register = () => (
 			<input type="radio" />
 			<label htmlFor="tutor">Tutor?</label>
 		</div>
-		<TutorRegister />
+		<StudentRegister />
 	</div>
 );
 

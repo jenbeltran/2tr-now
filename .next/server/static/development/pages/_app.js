@@ -127,10 +127,10 @@ const Footer = () => __jsx("div", {
 
 /***/ }),
 
-/***/ "./components/Navbar.js":
-/*!******************************!*\
-  !*** ./components/Navbar.js ***!
-  \******************************/
+/***/ "./components/navbars/Navbar.js":
+/*!**************************************!*\
+  !*** ./components/navbars/Navbar.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -140,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "reactstrap");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/Navbar.js";
+var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/navbars/Navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -183,10 +183,10 @@ const Navbar = () => __jsx("div", {
 
 /***/ }),
 
-/***/ "./components/StudentNavbar.js":
-/*!*************************************!*\
-  !*** ./components/StudentNavbar.js ***!
-  \*************************************/
+/***/ "./components/navbars/StudentNavbar.js":
+/*!*********************************************!*\
+  !*** ./components/navbars/StudentNavbar.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -196,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "reactstrap");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/StudentNavbar.js";
+var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/navbars/StudentNavbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -363,10 +363,10 @@ const StudentNavbar = props => {
 
 /***/ }),
 
-/***/ "./components/TutorNavbar.js":
-/*!***********************************!*\
-  !*** ./components/TutorNavbar.js ***!
-  \***********************************/
+/***/ "./components/navbars/TutorNavbar.js":
+/*!*******************************************!*\
+  !*** ./components/navbars/TutorNavbar.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -376,7 +376,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "reactstrap");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/TutorNavbar.js";
+var _jsxFileName = "/Users/jenbeltran/Desktop/2tr-now/components/navbars/TutorNavbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2161,9 +2161,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.js");
-/* harmony import */ var _components_StudentNavbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/StudentNavbar */ "./components/StudentNavbar.js");
-/* harmony import */ var _components_TutorNavbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/TutorNavbar */ "./components/TutorNavbar.js");
+/* harmony import */ var _components_navbars_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/navbars/Navbar */ "./components/navbars/Navbar.js");
+/* harmony import */ var _components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/navbars/StudentNavbar */ "./components/navbars/StudentNavbar.js");
+/* harmony import */ var _components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/navbars/TutorNavbar */ "./components/navbars/TutorNavbar.js");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
@@ -2299,7 +2299,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 40
       },
       __self: this
-    }, __jsx(_components_TutorNavbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41

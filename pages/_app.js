@@ -1,8 +1,8 @@
 import React from 'react';
 import App from 'next/app';
-import Navbar from '../components/Navbar';
-import StudentNavbar from '../components/StudentNavbar';
-import TutorNavbar from '../components/TutorNavbar';
+import Navbar from '../components/navbars/Navbar';
+import StudentNavbar from '../components/navbars/StudentNavbar';
+import TutorNavbar from '../components/navbars/TutorNavbar';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 
