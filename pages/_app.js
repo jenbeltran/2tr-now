@@ -38,7 +38,7 @@ class MyApp extends App {
 					<link href="/static/profile.css" rel="stylesheet" />
 				</Head>
 				<body>
-					<TutorNavbar />
+					<StudentNavbar />
 					<Component {...pageProps} />
 					<Footer />
 				</body>

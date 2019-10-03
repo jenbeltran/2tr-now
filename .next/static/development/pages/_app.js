@@ -25043,7 +25043,7 @@ function (_App) {
           lineNumber: 40
         },
         __self: this
-      }, __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_11__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
