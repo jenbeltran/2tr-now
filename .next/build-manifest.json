@@ -4,6 +4,10 @@
     "static/development/dll/dll_397dc449097af0b4e992.js.map"
   ],
   "pages": {
+    "/": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -12,15 +16,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_completed": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/tutor_completed": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/tutor_pending": [
+    "/tutor_dashboard": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
