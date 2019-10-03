@@ -121,14 +121,7 @@ const Footer = () => __jsx("div", {
     lineNumber: 3
   },
   __self: undefined
-}, "Created by Jen Beltran & Steph Gagnon"), __jsx("p", {
-  className: "footerImg",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}));
+}, "Created by Jen Beltran & Steph Gagnon"));
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 

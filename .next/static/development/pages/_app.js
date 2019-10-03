@@ -29,14 +29,7 @@ var Footer = function Footer() {
       lineNumber: 3
     },
     __self: this
-  }, "Created by Jen Beltran & Steph Gagnon"), __jsx("p", {
-    className: "footerImg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }));
+  }, "Created by Jen Beltran & Steph Gagnon"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/tutor_dashboard":"static/development/pages/tutor_dashboard.js","/":"static/development/pages/index.js"}
-=======
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/student_completed":"static/development/pages/student_completed.js","/student_dashboard":"static/development/pages/student_dashboard.js","/student_pending":"static/development/pages/student_pending.js","/tutor_completed":"static/development/pages/tutor_completed.js","/tutor_dashboard":"static/development/pages/tutor_dashboard.js","/tutor_pending":"static/development/pages/tutor_pending.js"}
->>>>>>> 4d331b8a3bb6f3738a60cdb807f47087b26556e5
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/tutor_pending":"static/development/pages/tutor_pending.js","/":"static/development/pages/index.js"}
