@@ -3,8 +3,8 @@ import Modal from '../components/Modal';
 import Placeholder from '../static/placeholder.png';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
-import SpecialtyBusiness from '../components/SpecialtyBusiness';
-import SpecialtyMath from '../components/SpecialtyMath';
+import SpecialtyBusiness from '../components/specialty/SpecialtyBusiness';
+import SpecialtyMath from '../components/specialty/SpecialtyMath';
 
 const TutorProfile = () => (
 	<div>

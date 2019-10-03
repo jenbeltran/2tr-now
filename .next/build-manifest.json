@@ -12,7 +12,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_completed": [
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -20,7 +20,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/tutor_dashboard": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/tutor_pending": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_profile": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

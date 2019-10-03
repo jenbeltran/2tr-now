@@ -35,12 +35,12 @@ const TutorNavbar = (props) => {
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/">
+							<NavLink className="Navbar-link" href="/tutor_pending">
 								Pending Requests
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/">
+							<NavLink className="Navbar-link" href="/tutor_completed">
 								Completed Sessions
 							</NavLink>
 						</NavItem>
