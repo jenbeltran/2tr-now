@@ -2299,7 +2299,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 40
       },
       __self: this
-    }, __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41

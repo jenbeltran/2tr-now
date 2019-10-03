@@ -5,7 +5,7 @@ import Add from '../static/add.png';
 import Eye from '../static/eye.png';
 import Checkmark from '../static/checkmark.png';
 
-const TutorDashboard = () => (
+const StudentDashboard = () => (
 	<div>
 		<table className="Dashboard-table">
 			<tr>
@@ -20,30 +20,36 @@ const TutorDashboard = () => (
 		<Container>
 			<CardDeck>
 				<Card>
-					<CardBody>
-						<CardTitle className="Dashboard-cardTitle">Create a New Tutor Request</CardTitle>
-						<CardImg className="StudentDashboard-cardImg" src={Add} alt="Create a New Tutor Request" />
-					</CardBody>
+					<a href="/student_request">
+						<CardBody>
+							<CardTitle className="Dashboard-cardTitle">Create a New Tutor Request</CardTitle>
+							<CardImg className="StudentDashboard-cardImg" src={Add} alt="Create a New Tutor Request" />
+						</CardBody>
+					</a>
 				</Card>
 				<Card>
-					<CardBody>
-						<CardTitle className="Dashboard-cardTitle">View All Pending Requests</CardTitle>
-						<CardImg className="StudentDashboard-cardImg" src={Eye} alt="View Pending Requests" />
-					</CardBody>
+					<a href="/student_pending">
+						<CardBody>
+							<CardTitle className="Dashboard-cardTitle">View All Pending Requests</CardTitle>
+							<CardImg className="StudentDashboard-cardImg" src={Eye} alt="View Pending Requests" />
+						</CardBody>
+					</a>
 				</Card>
 				<Card>
-					<CardBody>
-						<CardTitle className="Dashboard-cardTitle">View Completed Tutor Sessions</CardTitle>
-						<CardImg
-							className="StudentDashboard-cardImg"
-							src={Checkmark}
-							alt="View Completed Tutor Sessions"
-						/>
-					</CardBody>
+					<a href="/student_completed">
+						<CardBody>
+							<CardTitle className="Dashboard-cardTitle">View Completed Tutor Sessions</CardTitle>
+							<CardImg
+								className="StudentDashboard-cardImg"
+								src={Checkmark}
+								alt="View Completed Tutor Sessions"
+							/>
+						</CardBody>
+					</a>
 				</Card>
 			</CardDeck>
 		</Container>
 	</div>
 );
 
-export default TutorDashboard;
+export default StudentDashboard;
