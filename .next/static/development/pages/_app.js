@@ -201,7 +201,7 @@ var StudentNavbar = function StudentNavbar(props) {
     __self: this
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/",
+    href: "/student_request",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -215,7 +215,7 @@ var StudentNavbar = function StudentNavbar(props) {
     __self: this
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/",
+    href: "/student_pending",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -229,7 +229,7 @@ var StudentNavbar = function StudentNavbar(props) {
     __self: this
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/",
+    href: "/student_completed",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
@@ -379,7 +379,7 @@ var TutorNavbar = function TutorNavbar(props) {
     __self: this
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/",
+    href: "/tutor_pending",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -393,7 +393,7 @@ var TutorNavbar = function TutorNavbar(props) {
     __self: this
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/",
+    href: "/tutor_completed",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43

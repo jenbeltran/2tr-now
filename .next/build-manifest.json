@@ -16,11 +16,30 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+<<<<<<< HEAD
     "/index": [
+=======
+    "/student_dashboard": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_pending": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_completed": [
+>>>>>>> 4d331b8a3bb6f3738a60cdb807f47087b26556e5
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/tutor_dashboard": [
+<<<<<<< HEAD
+=======
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_pending": [
+>>>>>>> 4d331b8a3bb6f3738a60cdb807f47087b26556e5
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

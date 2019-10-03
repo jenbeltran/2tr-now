@@ -19,12 +19,15 @@ const TutorDashboard = () => (
 		<Container>
 			<CardDeck>
 				<Card>
-					<CardBody>
-						<CardTitle className="Dashboard-cardTitle">View/Accept Pending Requests</CardTitle>
-						<CardImg className="TutorDashboard-cardImg" src={Eye} alt="View/Accept Pending Requests" />
-					</CardBody>
+					<a href="tutor_pending">
+						<CardBody>
+							<CardTitle className="Dashboard-cardTitle">View/Accept Pending Requests</CardTitle>
+							<CardImg className="TutorDashboard-cardImg" src={Eye} alt="View/Accept Pending Requests" />
+						</CardBody>
+					</a>
 				</Card>
 				<Card>
+					<a href="tutor_completed">
 					<CardBody>
 						<CardTitle className="Dashboard-cardTitle">View Completed Tutor Sessions</CardTitle>
 						<CardImg
@@ -33,6 +36,7 @@ const TutorDashboard = () => (
 							alt="View Completed Tutor Sessions"
 						/>
 					</CardBody>
+					</a>
 				</Card>
 			</CardDeck>
 		</Container>
