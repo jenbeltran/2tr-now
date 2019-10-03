@@ -1,6 +1,6 @@
 import { Container } from 'reactstrap';
 import BlueEye from '../static/blueeye.png';
-import Star from '../static/star.png';
+import TutorRateModal from '../components/TutorRateModal';
 
 const TutorCompleted = () => (
 	<div>
@@ -34,10 +34,8 @@ const TutorCompleted = () => (
 							<td>
 								<a rel="noopener">
 									<img src={BlueEye} alt="View Details" width="35px" />
-									<a rel="noopener">
-										<img src={Star} alt="View Details" width="30px" />
-									</a>
 								</a>
+								<TutorRateModal />
 							</td>
 						</tr>
 						<tr>
@@ -52,9 +50,7 @@ const TutorCompleted = () => (
 								<a rel="noopener">
 									<img src={BlueEye} alt="View Details" width="35px" />
 								</a>
-								<a rel="noopener">
-									<img src={Star} alt="View Details" width="30px" />
-								</a>
+								<TutorRateModal />
 							</td>
 						</tr>
 					</tbody>

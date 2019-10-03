@@ -1,1 +1,1 @@
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/tutor_pending":"static/development/pages/tutor_pending.js","/":"static/development/pages/index.js"}
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/tutor_completed":"static/development/pages/tutor_completed.js","/tutor_dashboard":"static/development/pages/tutor_dashboard.js"}

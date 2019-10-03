@@ -36,9 +36,10 @@ class MyApp extends App {
 					<link href="/static/register.css" rel="stylesheet" />
 					<link href="/static/dashboard.css" rel="stylesheet" />
 					<link href="/static/profile.css" rel="stylesheet" />
+					<link href="/static/modal.css" rel="stylesheet" />
 				</Head>
 				<body>
-					<TutorNavbar />
+					<StudentNavbar />
 					<Component {...pageProps} />
 					<Footer />
 				</body>

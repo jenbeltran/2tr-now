@@ -1,15 +1,15 @@
 import { Container } from 'reactstrap';
 import BlueEye from '../static/blueeye.png';
-import Star from '../static/star.png';
+import StudentRateModal from '../components/StudentRateModal';
 
 const StudentCompleted = () => (
 	<div>
 		<Container>
 			<h1>Completed Tutor Sessions</h1>
 
-			<div class="table-wrapper">
-				<table class="table table-light table-hover">
-					<thead class="thead-light">
+			<div className="table-wrapper">
+				<table className="table table-light table-hover">
+					<thead className="thead-light">
 						<tr>
 							<th scope="col">Request ID</th>
 							<th scope="col">Date</th>
@@ -34,10 +34,8 @@ const StudentCompleted = () => (
 							<td>
 								<a rel="noopener">
 									<img src={BlueEye} alt="View Details" width="35px" />
-									<a rel="noopener">
-										<img src={Star} alt="View Details" width="30px" />
-									</a>
 								</a>
+								<StudentRateModal />
 							</td>
 						</tr>
 						<tr>
@@ -52,9 +50,7 @@ const StudentCompleted = () => (
 								<a rel="noopener">
 									<img src={BlueEye} alt="View Details" width="35px" />
 								</a>
-								<a rel="noopener">
-									<img src={Star} alt="View Details" width="30px" />
-								</a>
+								<StudentRateModal />
 							</td>
 						</tr>
 					</tbody>
