@@ -32,7 +32,7 @@ const TutorCompleted = () => (
 							<td>10 mins</td>
 							<td>Sydney White</td>
 							<td>
-								<a rel="noopener">
+								<a href="/request_details">
 									<img src={BlueEye} alt="View Details" width="35px" />
 								</a>
 								<TutorRateModal />
@@ -47,7 +47,7 @@ const TutorCompleted = () => (
 							<td>10 mins</td>
 							<td>Sydney White</td>
 							<td>
-								<a rel="noopener">
+								<a rel="noopener" href="/request_details">
 									<img src={BlueEye} alt="View Details" width="35px" />
 								</a>
 								<TutorRateModal />

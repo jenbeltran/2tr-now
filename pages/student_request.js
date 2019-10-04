@@ -37,7 +37,7 @@ const StudentRequest = () => (
 			<textarea rows="5" cols="50" placeholder="Context with tasks/question(s) to be answered)" />
 			<br />
 			<br />
-			<Button outline href="/">
+			<Button outline href="/request_details">
 				Submit Request
 			</Button>
 		</Container>

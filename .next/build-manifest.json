@@ -12,6 +12,22 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/request_details": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_completed": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_request": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/tutor_completed": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
