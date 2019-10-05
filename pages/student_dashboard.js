@@ -22,7 +22,7 @@ const StudentDashboard = () => (
 				<Card>
 					<a href="/student_request">
 						<CardBody>
-							<CardTitle className="Dashboard-cardTitle">Create a New Tutor Request</CardTitle>
+							<CardTitle className="Dashboard-cardTitle">New Request</CardTitle>
 							<CardImg className="StudentDashboard-cardImg" src={Add} alt="Create a New Tutor Request" />
 						</CardBody>
 					</a>
@@ -30,7 +30,7 @@ const StudentDashboard = () => (
 				<Card>
 					<a href="/student_pending">
 						<CardBody>
-							<CardTitle className="Dashboard-cardTitle">View All Pending Requests</CardTitle>
+							<CardTitle className="Dashboard-cardTitle">Pending Requests</CardTitle>
 							<CardImg className="StudentDashboard-cardImg" src={Eye} alt="View Pending Requests" />
 						</CardBody>
 					</a>
@@ -38,7 +38,7 @@ const StudentDashboard = () => (
 				<Card>
 					<a href="/student_completed">
 						<CardBody>
-							<CardTitle className="Dashboard-cardTitle">View Completed Tutor Sessions</CardTitle>
+							<CardTitle className="Dashboard-cardTitle">Completed Sessions</CardTitle>
 							<CardImg
 								className="StudentDashboard-cardImg"
 								src={Checkmark}

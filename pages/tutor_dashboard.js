@@ -21,21 +21,21 @@ const TutorDashboard = () => (
 				<Card>
 					<a href="tutor_pending">
 						<CardBody>
-							<CardTitle className="Dashboard-cardTitle">View/Accept Pending Requests</CardTitle>
+							<CardTitle className="Dashboard-cardTitle">View Requests</CardTitle>
 							<CardImg className="TutorDashboard-cardImg" src={Eye} alt="View/Accept Pending Requests" />
 						</CardBody>
 					</a>
 				</Card>
 				<Card>
 					<a href="tutor_completed">
-					<CardBody>
-						<CardTitle className="Dashboard-cardTitle">View Completed Tutor Sessions</CardTitle>
-						<CardImg
-							className="TutorDashboard-cardImg"
-							src={Checkmark}
-							alt="View Completed Tutor Sessions"
-						/>
-					</CardBody>
+						<CardBody>
+							<CardTitle className="Dashboard-cardTitle">Completed Sessions</CardTitle>
+							<CardImg
+								className="TutorDashboard-cardImg"
+								src={Checkmark}
+								alt="View Completed Tutor Sessions"
+							/>
+						</CardBody>
 					</a>
 				</Card>
 			</CardDeck>

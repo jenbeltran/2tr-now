@@ -5,7 +5,7 @@ const Index = () => (
 			Simply register an account, login, and get matched with a tutor specifically suited to your needs.
 		</h1>
 		<Button className="Index-button" outline href="register">
-			Create an Account
+			Register
 		</Button>
 	</div>
 );

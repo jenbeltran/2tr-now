@@ -151,21 +151,28 @@ const Navbar = () => __jsx("div", {
     lineNumber: 3
   },
   __self: undefined
-}, __jsx("h1", {
-  className: "Navbar-h1",
+}, __jsx("a", {
   href: "/",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 4
   },
   __self: undefined
-}, "2TR-Now"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+}, __jsx("h1", {
+  className: "Navbar-h1",
+  href: "/",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}, "2TR-Now")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
   className: "Navbar-button1",
   outline: true,
   href: "/login",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 9
   },
   __self: undefined
 }, "Sign In"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
@@ -174,7 +181,7 @@ const Navbar = () => __jsx("div", {
   href: "register",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 12
   },
   __self: undefined
 }, "Register"));
@@ -228,24 +235,30 @@ const StudentNavbar = props => {
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarBrand"], {
-    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("p", {
     className: "Navbar-brand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
-  }, "2TR-Now")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarToggler"], {
+  }, "2TR-Now"))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarToggler"], {
     onClick: handleToggle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: undefined
   }), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Collapse"], {
@@ -253,7 +266,7 @@ const StudentNavbar = props => {
     navbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
@@ -261,13 +274,13 @@ const StudentNavbar = props => {
     navbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -275,13 +288,13 @@ const StudentNavbar = props => {
     href: "/student_dashboard",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: undefined
   }, "Dashboard")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -289,13 +302,13 @@ const StudentNavbar = props => {
     href: "/student_request",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: undefined
-  }, "Create New Request")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+  }, "New Request")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -303,13 +316,13 @@ const StudentNavbar = props => {
     href: "/student_pending",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: undefined
   }, "Pending Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -317,13 +330,13 @@ const StudentNavbar = props => {
     href: "/student_completed",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   }, "Completed Sessions")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledDropdown"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownToggle"], {
@@ -332,28 +345,28 @@ const StudentNavbar = props => {
     caret: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: undefined
   }, "Welcome, Sydney!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/student_profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: undefined
   }, "View Profile"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: undefined
   }, "Logout")))))));
@@ -408,24 +421,30 @@ const TutorNavbar = props => {
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarBrand"], {
-    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("p", {
     className: "Navbar-brand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
-  }, "2TR-Now")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarToggler"], {
+  }, "2TR-Now"))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarToggler"], {
     onClick: handleToggle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: undefined
   }), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Collapse"], {
@@ -433,7 +452,7 @@ const TutorNavbar = props => {
     navbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
@@ -441,13 +460,13 @@ const TutorNavbar = props => {
     navbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -455,13 +474,13 @@ const TutorNavbar = props => {
     href: "/tutor_dashboard",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: undefined
   }, "Dashboard")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -469,13 +488,13 @@ const TutorNavbar = props => {
     href: "/tutor_pending",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: undefined
   }, "Pending Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
@@ -483,13 +502,13 @@ const TutorNavbar = props => {
     href: "/tutor_completed",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: undefined
   }, "Completed Sessions")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledDropdown"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownToggle"], {
@@ -498,28 +517,28 @@ const TutorNavbar = props => {
     caret: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   }, "Welcome, Mike!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/tutor_profile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: undefined
   }, "View Profile"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: undefined
   }, "Logout")))))));

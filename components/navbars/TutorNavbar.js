@@ -23,8 +23,10 @@ const TutorNavbar = (props) => {
 	return (
 		<div>
 			<Navbar color="light" light expand="md">
-				<NavbarBrand href="/">
-					<p className="Navbar-brand">2TR-Now</p>
+				<NavbarBrand>
+					<a href="/">
+						<p className="Navbar-brand">2TR-Now</p>
+					</a>
 				</NavbarBrand>
 				<NavbarToggler onClick={handleToggle} />
 				<Collapse isOpen={dropdown} navbar>

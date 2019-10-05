@@ -2,16 +2,15 @@ body {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	background: url("plant-alone.png");
-	background-size: 40%;
+	background: url("book.jpg");
+	background-size: 100%;
 	background-repeat: no-repeat;
-	background-color: #EBE7E4;
-	background-position: right bottom;
+	background-color: #ebe7e4;
 	font-family: Pontano Sans;
 }
 
 .Footer {
-	position:fixed;
+	position: fixed;
 	bottom: 0px;
 	width: 100%;
 	font-size: .5em;

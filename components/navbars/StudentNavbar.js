@@ -23,8 +23,10 @@ const StudentNavbar = (props) => {
 	return (
 		<div>
 			<Navbar color="light" light expand="md">
-				<NavbarBrand href="/">
-					<p className="Navbar-brand">2TR-Now</p>
+				<NavbarBrand>
+					<a href="/">
+						<p className="Navbar-brand">2TR-Now</p>
+					</a>
 				</NavbarBrand>
 				<NavbarToggler onClick={handleToggle} />
 				<Collapse isOpen={dropdown} navbar>
@@ -36,7 +38,7 @@ const StudentNavbar = (props) => {
 						</NavItem>
 						<NavItem>
 							<NavLink className="Navbar-link" href="/student_request">
-								Create New Request
+								New Request
 							</NavLink>
 						</NavItem>
 						<NavItem>

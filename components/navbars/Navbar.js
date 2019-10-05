@@ -1,9 +1,11 @@
 import { Button } from 'reactstrap';
 const Navbar = () => (
 	<div>
-		<h1 className="Navbar-h1" href="/">
-			2TR-Now
-		</h1>
+		<a href="/">
+			<h1 className="Navbar-h1" href="/">
+				2TR-Now
+			</h1>
+		</a>
 		<Button className="Navbar-button1" outline href="/login">
 			Sign In
 		</Button>
