@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `sessionRequest`
+-- Table structure for table `session_request`
 --
 
-DROP TABLE IF EXISTS `sessionRequest`;
+DROP TABLE IF EXISTS `session_request`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `sessionRequest` (
+CREATE TABLE `session_request` (
   `requestId` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `studentId` int(10) unsigned NOT NULL,
   `program` varchar(100) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '',
@@ -33,28 +33,28 @@ CREATE TABLE `sessionRequest` (
   `sessionLength` int(10) unsigned NOT NULL,
   PRIMARY KEY (`requestId`),
   KEY `studentId` (`studentId`),
-  CONSTRAINT `sessionrequest_ibfk_1` FOREIGN KEY (`studentId`) REFERENCES `students` (`studentId`)
+  CONSTRAINT `session_request_ibfk_1` FOREIGN KEY (`studentId`) REFERENCES `students` (`studentId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sessionRequest`
+-- Dumping data for table `session_request`
 --
 
-LOCK TABLES `sessionRequest` WRITE;
-/*!40000 ALTER TABLE `sessionRequest` DISABLE KEYS */;
-INSERT INTO `sessionRequest` VALUES (1,1001,'Math','Calculus','Partial Derivatives','I am struggling to understand the meaning of partial derivative. I would like to get some help by going through examples. ','English',30),(2,1000,'Science','Biology','Genetics','I have a test tomorrow on Genetics. I would like to get help understanding DNA and genomes. ','English',60),(3,1002,'Computer Science','JavaScript','For Loops','I\'m working on creating an app and can\'t get the for loop to work. I would like to get help with this concept. ','English',30),(4,1003,'Language','French','English to French','I\'m trying to write an essay for my french languages class but struggling with verbs and sentence construction.','French',30);
-/*!40000 ALTER TABLE `sessionRequest` ENABLE KEYS */;
+LOCK TABLES `session_request` WRITE;
+/*!40000 ALTER TABLE `session_request` DISABLE KEYS */;
+INSERT INTO `session_request` VALUES (1,1001,'Math','Calculus','Partial Derivatives','I am struggling to understand the meaning of partial derivative. I would like to get some help by going through examples. ','English',30),(2,1000,'Science','Biology','Genetics','I have a test tomorrow on Genetics. I would like to get help understanding DNA and genomes. ','English',60),(3,1002,'Computer Science','JavaScript','For Loops','I\'m working on creating an app and can\'t get the for loop to work. I would like to get help with this concept. ','English',30),(4,1003,'Language','French','English to French','I\'m trying to write an essay for my french languages class but struggling with verbs and sentence construction.','French',30);
+/*!40000 ALTER TABLE `session_request` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `studentRating`
+-- Table structure for table `student_rating`
 --
 
-DROP TABLE IF EXISTS `studentRating`;
+DROP TABLE IF EXISTS `student_rating`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `studentRating` (
+CREATE TABLE `student_rating` (
   `studentRatingId` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `sessionId` int(10) unsigned NOT NULL,
   `review` text COLLATE utf8mb4_general_ci,
@@ -63,18 +63,18 @@ CREATE TABLE `studentRating` (
   `flexibility` int(10) unsigned NOT NULL,
   PRIMARY KEY (`studentRatingId`),
   KEY `sessionId` (`sessionId`),
-  CONSTRAINT `studentrating_ibfk_1` FOREIGN KEY (`sessionId`) REFERENCES `tutorsession` (`sessionId`)
+  CONSTRAINT `student_rating_ibfk_1` FOREIGN KEY (`sessionId`) REFERENCES `tutor_session` (`sessionId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `studentRating`
+-- Dumping data for table `student_rating`
 --
 
-LOCK TABLES `studentRating` WRITE;
-/*!40000 ALTER TABLE `studentRating` DISABLE KEYS */;
-INSERT INTO `studentRating` VALUES (1,1,'Great session, Alex was very involved and looking to learn. ',5,4,5),(2,2,'Well done! Good work. In the future please give more then 10 minutes notice if youre going to be late to a session.',5,4,3),(3,3,'Great session, John wanted to learn and was open to new concepts and ways of thinking. ',5,5,5),(4,4,'Madeline took a little while to understand verbs and the proper use but once it clicked she did great. Asked a lot of great questions and a pleasure to work with. ',5,4,4);
-/*!40000 ALTER TABLE `studentRating` ENABLE KEYS */;
+LOCK TABLES `student_rating` WRITE;
+/*!40000 ALTER TABLE `student_rating` DISABLE KEYS */;
+INSERT INTO `student_rating` VALUES (1,1,'Great session, Alex was very involved and looking to learn. ',5,4,5),(2,2,'Well done! Good work. In the future please give more then 10 minutes notice if youre going to be late to a session.',5,4,3),(3,3,'Great session, John wanted to learn and was open to new concepts and ways of thinking. ',5,5,5),(4,4,'Madeline took a little while to understand verbs and the proper use but once it clicked she did great. Asked a lot of great questions and a pleasure to work with. ',5,4,4);
+/*!40000 ALTER TABLE `student_rating` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -109,13 +109,13 @@ INSERT INTO `students` VALUES (1000,'sthompson@gmail.com','Sydney','Thompson','p
 UNLOCK TABLES;
 
 --
--- Table structure for table `tutorRating`
+-- Table structure for table `tutor_rating`
 --
 
-DROP TABLE IF EXISTS `tutorRating`;
+DROP TABLE IF EXISTS `tutor_rating`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `tutorRating` (
+CREATE TABLE `tutor_rating` (
   `tutorRatingId` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `sessionId` int(10) unsigned NOT NULL,
   `review` text COLLATE utf8mb4_general_ci,
@@ -124,18 +124,49 @@ CREATE TABLE `tutorRating` (
   `knowledge` int(10) unsigned NOT NULL,
   PRIMARY KEY (`tutorRatingId`),
   KEY `sessionId` (`sessionId`),
-  CONSTRAINT `tutorrating_ibfk_1` FOREIGN KEY (`sessionId`) REFERENCES `tutorsession` (`sessionId`)
+  CONSTRAINT `tutor_rating_ibfk_1` FOREIGN KEY (`sessionId`) REFERENCES `tutor_session` (`sessionId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tutorRating`
+-- Dumping data for table `tutor_rating`
 --
 
-LOCK TABLES `tutorRating` WRITE;
-/*!40000 ALTER TABLE `tutorRating` DISABLE KEYS */;
-INSERT INTO `tutorRating` VALUES (1,1,'Mike was very helpful. I wasnt understanding Derivatives and he had to explain in a few different ways until it finally clicked! Thanks for the help!',5,5,5),(2,2,'Lori was very friendly. I learned a lot from her!',3,5,5),(3,3,'I finally understand for loops! Andrew was great! So thankful for the last minute help. Much needed.',4,4,5),(4,4,'Meghan was a great french tutor. She helped me understand concepts I\'ve struggled with for years. And I finally finished my paper!',5,5,5);
-/*!40000 ALTER TABLE `tutorRating` ENABLE KEYS */;
+LOCK TABLES `tutor_rating` WRITE;
+/*!40000 ALTER TABLE `tutor_rating` DISABLE KEYS */;
+INSERT INTO `tutor_rating` VALUES (1,1,'Mike was very helpful. I wasnt understanding Derivatives and he had to explain in a few different ways until it finally clicked! Thanks for the help!',5,5,5),(2,2,'Lori was very friendly. I learned a lot from her!',3,5,5),(3,3,'I finally understand for loops! Andrew was great! So thankful for the last minute help. Much needed.',4,4,5),(4,4,'Meghan was a great french tutor. She helped me understand concepts I\'ve struggled with for years. And I finally finished my paper!',5,5,5);
+/*!40000 ALTER TABLE `tutor_rating` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tutor_session`
+--
+
+DROP TABLE IF EXISTS `tutor_session`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `tutor_session` (
+  `sessionId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `tutorId` int(10) unsigned NOT NULL,
+  `requestId` int(10) unsigned NOT NULL,
+  `timeStampStart` timestamp NOT NULL,
+  `timeStampEnd` timestamp NOT NULL,
+  PRIMARY KEY (`sessionId`),
+  KEY `tutorId` (`tutorId`),
+  KEY `requestId` (`requestId`),
+  CONSTRAINT `tutor_session_ibfk_1` FOREIGN KEY (`tutorId`) REFERENCES `tutors` (`tutorId`),
+  CONSTRAINT `tutor_session_ibfk_2` FOREIGN KEY (`requestId`) REFERENCES `session_request` (`requestId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tutor_session`
+--
+
+LOCK TABLES `tutor_session` WRITE;
+/*!40000 ALTER TABLE `tutor_session` DISABLE KEYS */;
+INSERT INTO `tutor_session` VALUES (1,2000,1,'2019-06-02 00:30:00','2019-06-02 00:30:00'),(2,2001,2,'2019-06-02 03:00:00','2019-06-01 04:00:00'),(3,2002,3,'2019-08-05 17:00:00','2019-08-05 17:30:00'),(4,2004,4,'2019-08-05 05:30:00','2019-08-05 06:00:00');
+/*!40000 ALTER TABLE `tutor_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -171,37 +202,6 @@ INSERT INTO `tutors` VALUES (2000,'mikejones@gmail.com','Mike','Jones','pw1','Un
 UNLOCK TABLES;
 
 --
--- Table structure for table `tutorSession`
---
-
-DROP TABLE IF EXISTS `tutorSession`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `tutorSession` (
-  `sessionId` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `tutorId` int(10) unsigned NOT NULL,
-  `requestId` int(10) unsigned NOT NULL,
-  `timeStampStart` timestamp NOT NULL,
-  `timeStampEnd` timestamp NOT NULL,
-  PRIMARY KEY (`sessionId`),
-  KEY `tutorId` (`tutorId`),
-  KEY `requestId` (`requestId`),
-  CONSTRAINT `tutorsession_ibfk_1` FOREIGN KEY (`tutorId`) REFERENCES `tutors` (`tutorId`),
-  CONSTRAINT `tutorsession_ibfk_2` FOREIGN KEY (`requestId`) REFERENCES `sessionrequest` (`requestId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tutorSession`
---
-
-LOCK TABLES `tutorSession` WRITE;
-/*!40000 ALTER TABLE `tutorSession` DISABLE KEYS */;
-INSERT INTO `tutorSession` VALUES (1,2000,1,'2019-06-02 00:30:00','2019-06-02 00:30:00'),(2,2001,2,'2019-06-02 03:00:00','2019-06-01 04:00:00'),(3,2002,3,'2019-08-05 17:00:00','2019-08-05 17:30:00'),(4,2004,4,'2019-08-05 05:30:00','2019-08-05 06:00:00');
-/*!40000 ALTER TABLE `tutorSession` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping events for database '2TRNOW'
 --
 
@@ -218,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-02 22:11:48
+-- Dump completed on 2019-10-07 19:05:16
