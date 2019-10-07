@@ -9,6 +9,7 @@ Please see static/rubric.pdf as well
 DESIGN: https://www.figma.com/file/awo4OtR9Ob04ZQroVoODbd/2TR-Now?node-id=0%3A1
 
 In order to run the app locally:
-# npm install 
-
-# npm run dev
+```
+npm install 
+npm run dev
+```
