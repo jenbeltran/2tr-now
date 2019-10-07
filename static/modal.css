@@ -9,3 +9,11 @@
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
+
+.ReplyModal-button {
+	position: fixed;
+	bottom: 50px;
+	margin-left: 40%;
+	width: 200px;
+	height: 45px;
+}

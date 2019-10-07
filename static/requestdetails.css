@@ -1,0 +1,15 @@
+.RequestDetails-div1 {
+	border-color: black;
+	background-color: white;
+	margin: 15px 250px 15px 50px;
+	padding: 15px 50px 15px 50px;
+	border-radius: 20px;
+}
+
+.RequestDetails-div2 {
+	border-color: black;
+	background-color: white;
+	margin: 25px 100px 100px 100px;
+	padding: 15px 50px 15px 50px;
+	border-radius: 20px;
+}

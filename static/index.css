@@ -1,7 +1,7 @@
 .Index-h1 {
 	position: absolute;
 	left: 5%;
-	right: 40%;
+	right: 45%;
 	top: 22%;
 	bottom: 30%;
 	font-style: normal;
@@ -13,8 +13,8 @@
 .Index-button {
 	border-color: #265231;
 	color: #265231;
-	position:relative;
+	position: relative;
 	font-size: 2vw;
 	left: 24%;
-	margin-top:28%;
+	margin-top: 28%;
 }

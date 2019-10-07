@@ -30,7 +30,7 @@ const StudentPending = () => (
 							<td>Expense Reporting</td>
 							<td>10 mins</td>
 							<td>
-								<a rel="noopener">
+								<a href="/request_details">
 									<img src={BlueEye} alt="View Details" width="35px" />
 								</a>
 								<a rel="noopener">

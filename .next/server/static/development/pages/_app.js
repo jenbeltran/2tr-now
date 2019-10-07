@@ -2320,28 +2320,36 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
         lineNumber: 39
       },
       __self: this
-    })), __jsx("body", {
+    }), __jsx("link", {
+      href: "/static/requestdetails.css",
+      rel: "stylesheet",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 40
       },
       __self: this
-    }, __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 42
       },
       __self: this
-    }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    }, __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43
       },
       __self: this
-    })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 44
+      },
+      __self: this
+    })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
       },
       __self: this
     })));
