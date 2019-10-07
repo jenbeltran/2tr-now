@@ -4,9 +4,9 @@
 	"description": "FS1050 Capstone Course Project",
 	"main": "index.js",
 	"scripts": {
-		"dev": "next",
+		"dev": "node server.js",
 		"build": "next build",
-		"start": "next start",
+		"start": "NODE_ENV=production node server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
