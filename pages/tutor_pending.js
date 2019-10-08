@@ -26,7 +26,7 @@ const TutorPending = ({ posts }) => {
 							{posts.map((requests) => (
 								<tr>
 									<th scope="row">{requests.requestId}</th>
-									<td>29/Jan/2019</td>
+									<td>{requests.timestamp}</td>
 									<td>{requests.program}</td>
 									<td>{requests.subject}</td>
 									<td>{requests.topic}</td>

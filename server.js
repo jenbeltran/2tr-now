@@ -18,6 +18,15 @@ app.prepare().then(() => {
 		});
 	});
 
+	server.get('/api/join_sessions', (req, res) => {
+		db.query(
+			'select * from tutor_session, session_request where tutor_session.requestId=session_request.requestId',
+			(error, results, fields) => {
+				res.json(results);
+			}
+		);
+	});
+
 	server.get('*', (req, res) => {
 		return handle(req, res);
 	});
