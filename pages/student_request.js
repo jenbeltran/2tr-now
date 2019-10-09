@@ -1,47 +1,117 @@
+import { useState } from 'react';
 import { Container, Button } from 'reactstrap';
+import axios from 'axios';
+import Router from 'next/router';
 import Programs from '../components/Program';
 import SpecialtyBusiness from '../components/specialty/SpecialtyBusiness';
 import Language from '../components/Language';
 import Time from '../components/Time';
 
-const StudentRequest = () => (
-	<div>
-		<h1>Create a New Tutor Request</h1>
-		<Container>
-			<table>
-				<tr>
-					<td>
-						<p className="Profile-p">Program:</p>
-						<Programs />
-					</td>
-					<td>
-						<p className="Profile-p">Subject:</p>
-						<SpecialtyBusiness />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p className="Profile-p">Language:</p>
-						<Language />
-					</td>
-					<td>
-						<p className="Profile-p">Length:</p>
-						<Time />
-					</td>
-				</tr>
-			</table>
+const StudentRequest = (event) => {
+	const [ studentId, setStudentId ] = useState();
+	const [ program, setProgram ] = useState();
+	const [ subject, setSubject ] = useState();
+	const [ language, setLanguage ] = useState();
+	const [ sessionLength, setSessionLength ] = useState();
+	const [ topic, setTopic ] = useState();
+	const [ description, setDescription ] = useState();
 
-			<p className="Profile-p">Topic:</p>
-			<textarea rows="1" cols="50" />
-			<p className="Profile-p">Description:</p>
-			<textarea rows="5" cols="50" placeholder="Context with tasks/question(s) to be answered)" />
-			<br />
-			<br />
-			<Button outline href="/request_details">
-				Submit Request
-			</Button>
-		</Container>
-	</div>
-);
+	const handleChangeStudentId = (e) => {
+		setStudentId(e.target.value);
+	};
+
+	const handleChangeProgram = (e) => {
+		setProgram(e.target.value);
+	};
+
+	const handleChangeSubject = (e) => {
+		setSubject(e.target.value);
+	};
+
+	const handleChangeLanguage = (e) => {
+		setLanguage(e.target.value);
+	};
+
+	const handleChangeSessionLength = (e) => {
+		setSessionLength(e.target.value);
+	};
+
+	const handleChangeTopic = (e) => {
+		setTopic(e.target.value);
+	};
+
+	const handleChangeDescription = (e) => {
+		setDescription(e.target.value);
+	};
+
+	const handleSubmit = (event) => {
+		axios
+			.post('http://localhost:3000/api/requests', {
+				studentId     : studentId,
+				program       : program,
+				subject       : subject,
+				language      : language,
+				sessionLength : sessionLength,
+				topic         : topic,
+				description   : description
+			})
+			.then(Router.push(`/student_pending`))
+			.catch((err) => console.log(err));
+		console.log(studentId, program, subject, language, sessionLength, topic, description);
+	};
+
+	return (
+		<div>
+			<h1>Create a New Tutor Request</h1>
+			<Container>
+				<table>
+					<tr>
+						<td>
+							<p className="Profile-p">Program:</p>
+							<Programs name="program" value={program} onChange={handleChangeProgram} />
+						</td>
+						<td>
+							<p className="Profile-p">Subject:</p>
+							<SpecialtyBusiness name="subject" value={subject} onChange={handleChangeSubject} />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p className="Profile-p">Language:</p>
+							<Language name="language" value={language} onChange={handleChangeLanguage} />
+						</td>
+						<td>
+							<p className="Profile-p">Session Length:</p>
+							<Time name="sessionLength" value={sessionLength} onChange={handleChangeSessionLength} />
+						</td>
+					</tr>
+				</table>
+				<p className="Profile-p">Student ID:</p>
+				<textarea rows="1" cols="50" name="studentId" value={studentId} onChange={handleChangeStudentId} />
+				<p className="Profile-p">Topic:</p>
+				<textarea rows="1" cols="50" name="topic" value={topic} onChange={handleChangeTopic} />
+				<p className="Profile-p">Description:</p>
+				<textarea
+					rows="5"
+					cols="50"
+					placeholder="Context with tasks/question(s) to be answered"
+					name="description"
+					value={description}
+					onChange={handleChangeDescription}
+				/>
+				<br />
+				<br />
+				<Button onClick={handleSubmit} outline>
+					Submit Request
+				</Button>
+			</Container>
+		</div>
+	);
+};
+
+StudentRequest.getInitialProps = async () => {
+	const { data } = await axios.get('http://localhost:3000/api/requests');
+	return { posts: data };
+};
 
 export default StudentRequest;

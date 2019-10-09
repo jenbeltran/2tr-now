@@ -50,6 +50,24 @@ app.prepare().then(() => {
 		});
 	});
 
+	server.post('/api/requests', (req, res) => {
+		db.query(
+			'INSERT INTO session_request (studentId, program, subject, language, sessionLength, topic, description) VALUES (?, ?, ?, ?, ?, ?, ?)',
+			[
+				req.body.studentId,
+				req.body.program,
+				req.body.subject,
+				req.body.language,
+				req.body.sessionLength,
+				req.body.topic,
+				req.body.description
+			],
+			(error, results, fields) => {
+				res.json(results);
+			}
+		);
+	});
+
 	server.get('/api/join_sessions', (req, res) => {
 		db.query(
 			'select * from tutor_session, session_request where tutor_session.requestId=session_request.requestId',

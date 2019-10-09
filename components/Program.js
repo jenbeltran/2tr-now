@@ -1,6 +1,6 @@
-const Program = () => (
+const Program = (props) => (
 	<div>
-		<select>
+		<select name={props.name} value={props.value} onChange={props.onChange}>
 			<option value="selecting">Select a Program</option>
 			<option value="Business">Business</option>
 			<option value="Math">Math</option>

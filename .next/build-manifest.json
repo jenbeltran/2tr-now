@@ -11,6 +11,14 @@
     "/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/student_pending": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_request": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

@@ -25,9 +25,9 @@ const StudentPending = ({ posts }) => {
 
 						<tbody>
 							{posts.map((requests) => (
-								<tr>
+								<tr key={requests.requestId}>
 									<th scope="row">{requests.requestId}</th>
-									<td>{requests.timestamp}</td>
+									<td>Date</td>
 									<td>{requests.program}</td>
 									<td>{requests.subject}</td>
 									<td>{requests.topic}</td>
