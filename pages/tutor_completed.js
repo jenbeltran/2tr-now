@@ -52,7 +52,6 @@ const TutorCompleted = ({ posts }) => {
 
 TutorCompleted.getInitialProps = async () => {
 	const { data } = await axios.get('http://localhost:3000/api/join_sessions');
-	console.log(data);
 	return { posts: data };
 };
 
