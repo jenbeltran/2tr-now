@@ -4,6 +4,10 @@ import axios from 'axios';
 import Router from 'next/router';
 import Programs from '../components/Program';
 import SpecialtyBusiness from '../components/specialty/SpecialtyBusiness';
+import SpecialtyLanguage from '../components/specialty/SpecialtyLanguage';
+import SpecialtyMath from '../components/specialty/SpecialtyMath';
+import SpecialtyOther from '../components/specialty/SpecialtyOther';
+import SpecialtyScience from '../components/specialty/SpecialtyScience';
 import Language from '../components/Language';
 import Time from '../components/Time';
 
@@ -60,6 +64,19 @@ const StudentRequest = (event) => {
 		console.log(studentId, program, subject, language, sessionLength, topic, description);
 	};
 
+	let specialtySubject;
+	if (program === 'Business') {
+		specialtySubject = <SpecialtyBusiness name="subject" value={subject} onChange={handleChangeSubject} />;
+	} else if (program === 'ForeignLanguage') {
+		specialtySubject = <SpecialtyLanguage name="subject" value={subject} onChange={handleChangeSubject} />;
+	} else if (program === 'Math') {
+		specialtySubject = <SpecialtyMath name="subject" value={subject} onChange={handleChangeSubject} />;
+	} else if (program === 'Science') {
+		specialtySubject = <SpecialtyScience name="subject" value={subject} onChange={handleChangeSubject} />;
+	} else {
+		specialtySubject = <SpecialtyOther name="subject" value={subject} onChange={handleChangeSubject} />;
+	}
+
 	return (
 		<div>
 			<h1>Create a New Tutor Request</h1>
@@ -72,7 +89,7 @@ const StudentRequest = (event) => {
 						</td>
 						<td>
 							<p className="Profile-p">Subject:</p>
-							<SpecialtyBusiness name="subject" value={subject} onChange={handleChangeSubject} />
+							{specialtySubject}
 						</td>
 					</tr>
 					<tr>

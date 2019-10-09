@@ -1,6 +1,6 @@
-const SpecialtyMath = () => (
+const SpecialtyMath = (props) => (
 	<div>
-		<select>
+		<select name={props.name} value={props.value} onChange={props.onChange}>
 			<option value="selecting">Select a Specialty</option>
 			<option value="Calculus">Calculus</option>
 			<option value="Statistics">Statistics</option>

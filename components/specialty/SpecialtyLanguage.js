@@ -1,6 +1,6 @@
-const SpecialtyLanguage = () => (
+const SpecialtyLanguage = (props) => (
 	<div>
-		<select>
+		<select name={props.name} value={props.value} onChange={props.onChange}>
 			<option value="selecting">Select a Specialty</option>
 			<option value="French">French</option>
 			<option value="Spanish">Spanish</option>
