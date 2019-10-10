@@ -1,5 +1,6 @@
 // Connection keys
 HTTP_PORT=9999
+SESSION_SECRET=“secretsession”
 
 //MySQL DB keys
 DB_HOST='dbhost'
