@@ -44,12 +44,39 @@ server.use(defaultSessionValues);
 server.use(defaultErrorHandler);
 
 app.prepare().then(() => {
+	// student registration
+	server.post('/api/students', (req, res) => {
+		db.query(
+			'INSERT INTO students (studentEmail, firstName, lastName, password, location, dob, program) VALUES (?, ?, ?, ?, ?, ?, ?)',
+			[
+				req.body.studentEmail,
+				req.body.firstName,
+				req.body.lastName,
+				req.body.password,
+				req.body.location,
+				req.body.dob,
+				req.body.program
+			],
+			(error, results, fields) => {
+				res.json(results);
+			}
+		);
+	});
+
+	server.get('/api/students', (req, res) => {
+		db.query('SELECT * FROM students', (error, results, fields) => {
+			res.json(results);
+		});
+	});
+
+	// student and tutor to see pending requests
 	server.get('/api/requests', (req, res) => {
 		db.query('SELECT * FROM session_request', (error, results, fields) => {
 			res.json(results);
 		});
 	});
 
+	//student to send a request for tutor
 	server.post('/api/requests', (req, res) => {
 		db.query(
 			'INSERT INTO session_request (studentId, program, subject, language, sessionLength, topic, description) VALUES (?, ?, ?, ?, ?, ?, ?)',
@@ -68,6 +95,7 @@ app.prepare().then(() => {
 		);
 	});
 
+	//student and tutor to see completed sessions
 	server.get('/api/join_sessions', (req, res) => {
 		db.query(
 			'select * from tutor_session, session_request where tutor_session.requestId=session_request.requestId',
@@ -75,6 +103,17 @@ app.prepare().then(() => {
 				res.json(results);
 			}
 		);
+	});
+
+	//to see the details of each request
+	server.get('/api/request_details/:id', (req, res) => {
+		db.query('SELECT * FROM session_request WHERE requestId=?', [ req.params.id ], (error, results, fields) => {
+			res.json(results);
+		});
+	});
+
+	server.get('/request_details/:id', (req, res) => {
+		app.render(req, res, '/request_details', { id: req.params.id });
 	});
 
 	server.get('*', (req, res) => {

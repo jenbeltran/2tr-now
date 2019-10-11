@@ -1,64 +1,124 @@
+import { useState } from 'react';
+import axios from 'axios';
+import Router from 'next/router';
 import { Button } from 'reactstrap';
 import Countries from '../Countries';
 import Programs from '../Program';
-import Date from '../date_dropdowns/Date';
-import Month from '../date_dropdowns/Month';
-import Year from '../date_dropdowns/Year';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
 
-const StudentRegister = () => (
-	<div className="Register-div">
-		<table>
-			<tr>
-				<td>
-					<p className="Register-p">First Name:</p>
-					<input type="text" />
-				</td>
-				<td>
-					<p className="Register-p">Last Name:</p>
-					<input type="text" />
-				</td>
-			</tr>
-		</table>
+const StudentRegister = () => {
+	const [ firstName, setFirstName ] = useState();
+	const [ lastName, setLastName ] = useState();
+	const [ dob, setDob ] = useState();
+	const [ studentEmail, setStudentEmail ] = useState();
+	const [ password, setPassword ] = useState();
+	const [ location, setLocation ] = useState();
+	const [ program, setProgram ] = useState();
 
-		<p className="Register-p">Date of Birth:</p>
-		<table>
-			<tr>
-				<td>
-					<Date />
-				</td>
-				<td>
-					<Month />
-				</td>
-				<td>
-					<Year />
-				</td>
-			</tr>
-		</table>
+	const handleChangeFirstName = (e) => {
+		setFirstName(e.target.value);
+	};
 
-		<p className="Register-p">Email:</p>
-		<input type="email" />
-		<p className="Register-p">Password:</p>
-		<input type="password" />
-		<p className="Register-p">Re-enter Password:</p>
-		<input type="password" />
+	const handleChangeLastName = (e) => {
+		setLastName(e.target.value);
+	};
 
-		<table>
-			<tr>
-				<td>
-					<p className="Register-p">Location:</p>
-					<Countries />
-				</td>
-				<td>
-					<p className="Register-p">Program:</p>
-					<Programs />
-				</td>
-			</tr>
-		</table>
-		<br />
-		<Button outline href="student_dashboard">
-			Register
-		</Button>
-	</div>
-);
+	const handleChangeDob = (day) => {
+		setDob(day);
+	};
+
+	const handleChangeStudentEmail = (e) => {
+		setStudentEmail(e.target.value);
+	};
+
+	const handleChangePassword = (e) => {
+		setPassword(e.target.value);
+	};
+
+	const handleChangeLocation = (e) => {
+		setLocation(e.target.value);
+	};
+
+	const handleChangeProgram = (e) => {
+		setProgram(e.target.value);
+	};
+
+	const handleSubmit = (event) => {
+		let stringDate = dob.toLocaleDateString();
+		axios
+			.post('http://localhost:3000/api/students', {
+				studentEmail : studentEmail,
+				firstName    : firstName,
+				lastName     : lastName,
+				password     : password,
+				location     : location,
+				dob          : stringDate,
+				program      : program
+			})
+			.then(Router.push(`/student_dashboard`))
+			.catch((err) => console.log(err));
+	};
+
+	return (
+		<div className="Register-div">
+			<form>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<p className="Register-p">First Name:</p>
+								<input
+									type="text"
+									name="firstName"
+									value={firstName}
+									onChange={handleChangeFirstName}
+								/>
+							</td>
+							<td>
+								<p className="Register-p">Last Name:</p>
+								<input type="text" name="lastName" value={lastName} onChange={handleChangeLastName} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p className="Register-p">Date of Birth:</p>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<DayPickerInput name="dob" onDayChange={handleChangeDob} value={dob} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p className="Register-p">Email:</p>
+				<input type="email" name="studentEmail" value={studentEmail} onChange={handleChangeStudentEmail} />
+				<p className="Register-p">Password:</p>
+				<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
+
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<p className="Register-p">Location:</p>
+								<Countries name="location" value={location} onChange={handleChangeLocation} />
+							</td>
+							<td>
+								<p className="Register-p">Program:</p>
+								<Programs name="program" value={program} onChange={handleChangeProgram} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br />
+				<Button outline onClick={handleSubmit}>
+					Register
+				</Button>
+			</form>
+		</div>
+	);
+};
 
 export default StudentRegister;

@@ -33,7 +33,7 @@ const StudentPending = ({ posts }) => {
 									<td>{requests.topic}</td>
 									<td>{requests.sessionLength}</td>
 									<td>
-										<a href="/request_details">
+										<a href={`/request_details/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
 										<a rel="noopener">
