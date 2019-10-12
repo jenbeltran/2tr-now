@@ -82,3 +82,15 @@ INSERT INTO `session_request` VALUES
 (4,1003,'Language','French','English to French','I am trying to write an essay for my french languages class but struggling with verbs and sentence construction.','French',30),
 (6,1000,'Math','Statistics','French Homework','I need help with my french homework about verbs. I do not understand how to complete it. ','English',20);
 
+INSERT INTO `tutors` VALUES 
+(2000,'mikejones@gmail.com','Mike','Jones','pw1','United States of America','Math','Calculus',NULL,NULL),
+(2001,'lmeghan@outlook.com','Lori','Morgan','pw2','Canada','Science','Biology',NULL,NULL),
+(2002,'andewss@gmail.com','Andrew','Synde','pw4','Mexico','Computer Science','JavaScript',NULL,NULL),
+(2003,'aadams@gmail.com','Amanda','Adams','pw3','Canada','Science','JavaScript',NULL,NULL),
+(2004,'meghan42@gmail.com','Meghan','Brooks','pw5','United States of America','Languages','French',NULL,NULL);
+
+INSERT INTO `tutor_session` VALUES 
+(1,2000,1,'2019-06-02 00:30:00','2019-06-02 00:30:00'),
+(2,2001,2,'2019-06-02 03:00:00','2019-06-01 04:00:00'),
+(3,2002,3,'2019-08-05 17:00:00','2019-08-05 17:30:00'),
+(4,2004,4,'2019-08-05 05:30:00','2019-08-05 06:00:00');

@@ -50,9 +50,9 @@ const StudentCompleted = ({ posts }) => {
 	);
 };
 
-StudentCompleted.getInitialProps = async () => {
-	const { data } = await axios.get('http://localhost:3000/api/join_sessions');
-	return { posts: data };
+StudentCompleted.getInitialProps = async ({ query }) => {
+	const { data } = await axios.get(`http://localhost:3000/api/student_completed/${query.id}`);
+	return { ...query, posts: data };
 };
 
 export default StudentCompleted;

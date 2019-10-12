@@ -43,10 +43,10 @@ const StudentRegister = () => {
 		setProgram(e.target.value);
 	};
 
-	const handleSubmit = (event) => {
+	const handleSubmit = () => {
 		let stringDate = dob.toLocaleDateString();
 		axios
-			.post('http://localhost:3000/api/students', {
+			.post('http://localhost:3000/api/student', {
 				studentEmail : studentEmail,
 				firstName    : firstName,
 				lastName     : lastName,
@@ -55,7 +55,7 @@ const StudentRegister = () => {
 				dob          : stringDate,
 				program      : program
 			})
-			.then(Router.push(`/student_dashboard`))
+			.then(Router.push('/login'))
 			.catch((err) => console.log(err));
 	};
 

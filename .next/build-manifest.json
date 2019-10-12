@@ -20,11 +20,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/register": [
+    "/student_completed": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_dashboard": [
+    "/student_request": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

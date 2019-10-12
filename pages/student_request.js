@@ -50,7 +50,7 @@ const StudentRequest = (event) => {
 
 	const handleSubmit = (event) => {
 		axios
-			.post('http://localhost:3000/api/requests', {
+			.post('http://localhost:3000/api/student_requests', {
 				studentId     : studentId,
 				program       : program,
 				subject       : subject,
@@ -59,7 +59,12 @@ const StudentRequest = (event) => {
 				topic         : topic,
 				description   : description
 			})
-			.then(Router.push(`/student_pending`))
+			.then(
+				Router.push({
+					pathname : '/student_pending',
+					query    : { id: studentId }
+				})
+			)
 			.catch((err) => console.log(err));
 		console.log(studentId, program, subject, language, sessionLength, topic, description);
 	};
@@ -124,11 +129,6 @@ const StudentRequest = (event) => {
 			</Container>
 		</div>
 	);
-};
-
-StudentRequest.getInitialProps = async () => {
-	const { data } = await axios.get('http://localhost:3000/api/requests');
-	return { posts: data };
 };
 
 export default StudentRequest;

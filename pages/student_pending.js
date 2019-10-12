@@ -50,9 +50,9 @@ const StudentPending = ({ posts }) => {
 	);
 };
 
-StudentPending.getInitialProps = async () => {
-	const { data } = await axios.get('http://localhost:3000/api/requests');
-	return { posts: data };
+StudentPending.getInitialProps = async ({ query }) => {
+	const { data } = await axios.get(`http://localhost:3000/api/student_pending/${query.id}`);
+	return { ...query, posts: data };
 };
 
 export default StudentPending;
