@@ -35,7 +35,7 @@ const StudentCompleted = ({ posts }) => {
 									<td>{requests.sessionLength}</td>
 									<td>{requests.tutorId}</td>
 									<td>
-										<a href="/request_details">
+										<a href={`/request_details/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
 										<StudentRateModal />

@@ -9,7 +9,7 @@ import Checkmark from '../static/checkmark.png';
 const StudentDashboard = ({ posts }) => (
 	<div>
 		{posts.map((requests) => (
-			<table className="Dashboard-table">
+			<table key={requests.studentId} className="Dashboard-table">
 				<tr>
 					<td>
 						<img src={Placeholder} alt="placeholder" width="125px;" />
@@ -22,7 +22,7 @@ const StudentDashboard = ({ posts }) => (
 		))}
 		<Container>
 			{posts.map((requests) => (
-				<CardDeck>
+				<CardDeck key={requests.studentId}>
 					<Card>
 						<a href="/student_request">
 							<CardBody>
@@ -64,7 +64,7 @@ const StudentDashboard = ({ posts }) => (
 );
 
 StudentDashboard.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/student_dashboard/${query.id}`);
+	const { data } = await axios.get(`http://localhost:3000/api/student/${query.id}`);
 	return { ...query, posts: data };
 };
 

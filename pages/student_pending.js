@@ -9,9 +9,9 @@ const StudentPending = ({ posts }) => {
 			<Container>
 				<h1>View Pending Requests</h1>
 
-				<div class="table-wrapper">
-					<table class="table table-light table-hover">
-						<thead class="thead-light">
+				<div className="table-wrapper">
+					<table className="table table-light table-hover">
+						<thead className="thead-light">
 							<tr>
 								<th scope="col">Request ID</th>
 								<th scope="col">Date</th>

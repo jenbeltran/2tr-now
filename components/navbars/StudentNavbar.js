@@ -13,6 +13,7 @@ import {
 	DropdownMenu,
 	DropdownItem
 } from 'reactstrap';
+import Link from 'next/link';
 
 const StudentNavbar = () => {
 	const [ dropdown, setDropdown ] = useState(false);
@@ -24,15 +25,15 @@ const StudentNavbar = () => {
 		<div>
 			<Navbar color="light" light expand="md">
 				<NavbarBrand>
-					<a href="/">
+					<Link href="/">
 						<p className="Navbar-brand">2TR-Now</p>
-					</a>
+					</Link>
 				</NavbarBrand>
 				<NavbarToggler onClick={handleToggle} />
 				<Collapse isOpen={dropdown} navbar>
 					<Nav className="ml-auto" navbar>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/student_dashboard/:id">
+							<NavLink className="Navbar-link" href="/student_dashboard/1001">
 								Dashboard
 							</NavLink>
 						</NavItem>
@@ -56,7 +57,7 @@ const StudentNavbar = () => {
 								Welcome, testing!
 							</DropdownToggle>
 							<DropdownMenu right>
-								<DropdownItem href="/student_profile">View Profile</DropdownItem>
+								<DropdownItem href="/student_profile/1001">View Profile</DropdownItem>
 								<DropdownItem href="/">Logout</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>

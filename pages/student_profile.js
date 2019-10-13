@@ -1,55 +1,71 @@
 import { Container } from 'reactstrap';
+import axios from 'axios';
 import Modal from '../components/Modal';
 import Placeholder from '../static/placeholder.png';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
 
-const StudentProfile = () => (
+const StudentProfile = ({ posts }) => (
 	<div>
-		<table className="Dashboard-table">
-			<tr>
-				<td>
-					<Modal
-						modalButton={<img src={Placeholder} alt="placeholder" width="125px;" />}
-						modalHeader={'Profile Photo Upload'}
-						modalBody={'Please upload a profile photo'}
-					/>
-				</td>
-				<td>
-					<h1>Sydney White</h1>
-				</td>
-			</tr>
-		</table>
-		<Container>
-			<table>
+		{posts.map((requests) => (
+			<table key={requests.studentId} className="Dashboard-table">
 				<tr>
 					<td>
-						<p className="Profile-p">First Name:</p>
-						<input type="text" />
+						<Modal
+							modalButton={<img src={Placeholder} alt="placeholder" width="125px;" />}
+							modalHeader={'Profile Photo Upload'}
+							modalBody={'Please upload a profile photo'}
+						/>
 					</td>
 					<td>
-						<p className="Profile-p">Last Name:</p>
-						<input type="text" />
+						<h1>
+							{requests.firstName} {requests.lastName}
+						</h1>
 					</td>
 				</tr>
 			</table>
+		))}
+		<Container>
+			{posts.map((requests) => (
+				<table key={requests.studentId}>
+					<tr>
+						<td>
+							<p className="Profile-p">First Name:</p>
+							<input type="text" value={requests.firstName} readOnly />
+						</td>
+						<td>
+							<p className="Profile-p">Last Name:</p>
+							<input type="text" value={requests.lastName} readOnly />
+						</td>
+					</tr>
+				</table>
+			))}
 
-			<p className="Profile-p">Date of Birth:</p>
-			<input type="text" />
-			<p className="Profile-p">Email:</p>
-			<input type="email" />
-			<p className="Profile-p">Location:</p>
-			<Countries />
-			<p className="Profile-p">Program:</p>
-			<Programs />
-			<br />
-			<Modal
-				modalButton={'Save'}
-				modalHeader={'Confirm Details'}
-				modalBody={'Please confirm your details below:'}
-			/>
+			{posts.map((requests) => (
+				<div key={requests.studentId}>
+					<p className="Profile-p">Date of Birth:</p>
+					<input type="text" value={requests.dob} readOnly />
+					<p className="Profile-p">Email:</p>
+					<input type="email" value={requests.studentEmail} readOnly />
+					<p className="Profile-p">Location:</p>
+					<Countries value={requests.location} />
+					<p className="Profile-p">Program:</p>
+					<Programs value={requests.program} />
+					<br />
+					<Modal
+						modalButton={'Save'}
+						modalHeader={'Confirm Details'}
+						modalBody={'Please confirm your details below:'}
+					/>
+				</div>
+			))}
 		</Container>
 	</div>
 );
+
+StudentProfile.getInitialProps = async ({ query }) => {
+	const { data } = await axios.get(`http://localhost:3000/api/student/${query.id}`);
+	return { ...query, posts: data };
+};
 
 export default StudentProfile;

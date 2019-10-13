@@ -4,10 +4,10 @@ import ReplyModal from '../components/ReplyModal';
 const RequestDetails = ({ posts }) => {
 	return (
 		<div>
-			{posts.map((requests) => <h1>Request ID: {requests.requestId}</h1>)}
+			{posts.map((requests) => <h1 key={requests.requestId}>Request ID: {requests.requestId}</h1>)}
 			{posts.map((requests) => (
 				<div key={requests.requestId} className="RequestDetails-div1">
-					<a href="/student_view">
+					<a href="/student_view/1001">
 						<h6>{requests.studentId}</h6>
 					</a>
 					<h6>PROGRAM: {requests.program}</h6>
