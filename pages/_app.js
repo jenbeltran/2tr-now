@@ -12,7 +12,7 @@ class MyApp extends App {
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx);
 		}
-
+		console.log(ctx.query);
 		return { pageProps };
 	}
 

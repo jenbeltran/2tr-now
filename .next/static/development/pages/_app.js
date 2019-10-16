@@ -182,7 +182,7 @@ var TutorNavbar = function TutorNavbar(props) {
     href: "/tutor_dashboard/2000"
   }, "Dashboard")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/tutor_pending/2000"
+    href: "/tutor_pending"
   }, "Pending Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
     href: "/tutor_completed/2000"
@@ -25876,11 +25876,12 @@ function (_App) {
                 pageProps = _context.sent;
 
               case 6:
+                console.log(ctx.query);
                 return _context.abrupt("return", {
                   pageProps: pageProps
                 });
 
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }

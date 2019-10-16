@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Container } from 'reactstrap';
+import { Container, Button } from 'reactstrap';
 import BlueEye from '../static/blueeye.png';
 
 const TutorPending = ({ posts }) => {
@@ -26,15 +26,16 @@ const TutorPending = ({ posts }) => {
 							{posts.map((requests) => (
 								<tr>
 									<th scope="row">{requests.requestId}</th>
-									<td>{requests.timestamp}</td>
+									<td>{requests.dateRequested}</td>
 									<td>{requests.program}</td>
 									<td>{requests.subject}</td>
 									<td>{requests.topic}</td>
 									<td>{requests.sessionLength}</td>
 									<td>
-										<a href="/request_details">
+										<a href={`/request_details/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
+										<Button>Accept</Button>
 									</td>
 								</tr>
 							))}
@@ -46,9 +47,9 @@ const TutorPending = ({ posts }) => {
 	);
 };
 
-TutorPending.getInitialProps = async () => {
-	const { data } = await axios.get('http://localhost:3000/api/requests');
-	return { posts: data };
+TutorPending.getInitialProps = async ({ query }) => {
+	const { data } = await axios.get(`http://localhost:3000/api/tutor_pending`);
+	return { ...query, posts: data };
 };
 
 export default TutorPending;

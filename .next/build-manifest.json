@@ -12,11 +12,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/next/dist/pages/_error": [
+    "/student_completed": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/tutor_profile": [
+    "/tutor_pending": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

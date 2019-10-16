@@ -11,34 +11,10 @@ import SpecialtyLanguage from '../components/specialty/SpecialtyLanguage';
 import SpecialtyOther from '../components/specialty/SpecialtyOther';
 import SpecialtyScience from '../components/specialty/SpecialtyScience';
 
-const TutorProfile = ({ posts }) => {
-	const [ program, setProgram ] = useState();
-	const [ subject, setSubject ] = useState();
-
-	const handleChangeProgram = (e) => {
-		setProgram(e.target.value);
-	};
-
-	const handleChangeSubject = (e) => {
-		setSubject(e.target.value);
-	};
-
-	let specialtySubject;
-	if (program === 'Business') {
-		specialtySubject = <SpecialtyBusiness name="subject" value={subject} onChange={handleChangeSubject} />;
-	} else if (program === 'ForeignLanguage') {
-		specialtySubject = <SpecialtyLanguage name="subject" value={subject} onChange={handleChangeSubject} />;
-	} else if (program === 'Math') {
-		specialtySubject = <SpecialtyMath name="subject" value={subject} onChange={handleChangeSubject} />;
-	} else if (program === 'Science') {
-		specialtySubject = <SpecialtyScience name="subject" value={subject} onChange={handleChangeSubject} />;
-	} else {
-		specialtySubject = <SpecialtyOther name="subject" value={subject} onChange={handleChangeSubject} />;
-	}
-
-	return (
-		<div>
-			<table className="Dashboard-table">
+const TutorProfile = ({ posts }) => (
+	<div>
+		{posts.map((requests) => (
+			<table key={requests.tutorId} className="Dashboard-table">
 				<tr>
 					<td>
 						<Modal
@@ -48,47 +24,60 @@ const TutorProfile = ({ posts }) => {
 						/>
 					</td>
 					<td>
-						<h1>Mike Jones</h1>
+						<h1>
+							{requests.firstName} {requests.lastName}
+						</h1>
 					</td>
 				</tr>
 			</table>
-			<Container>
-				<table>
+		))}
+
+		<Container>
+			{posts.map((requests) => (
+				<table key={requests.tutorId}>
 					<tr>
 						<td>
 							<p className="Profile-p">First Name:</p>
-							<input type="text" />
+							<input type="text" value={requests.firstName} readOnly />
 						</td>
 						<td>
 							<p className="Profile-p">Last Name:</p>
-							<input type="text" />
+							<input type="text" value={requests.lastName} readOnly />
 						</td>
 					</tr>
 				</table>
-
-				<p className="Profile-p">Date of Birth:</p>
-				<input type="text" />
-				<p className="Profile-p">Email:</p>
-				<input type="email" />
-				<p className="Profile-p">Location:</p>
-				<Countries />
-
-				<table>
+			))}
+			{posts.map((requests) => (
+				<div key={requests.tutorId}>
+					<p className="Profile-p">Email:</p>
+					<input type="email" value={requests.tutorEmail} readOnly />
+					<p className="Profile-p">Location:</p>
+					<Countries value={requests.location} />
+				</div>
+			))}
+			{posts.map((requests) => (
+				<table key={requests.tutorId}>
 					<tr>
 						<td>
 							<p className="Profile-p">Program:</p>
-							<Programs name="program" value={program} onChange={handleChangeProgram} />
+							<Programs name="program" value={requests.program} />
 						</td>
 						<td>
 							<p className="Profile-p">Specialty:</p>
-							{specialtySubject}
+							<input type="subject" value={requests.specialty} readOnly />
 						</td>
 					</tr>
 				</table>
-			</Container>
-		</div>
-	);
-};
+			))}
+			<br />
+			<Modal
+				modalButton={'Save'}
+				modalHeader={'Confirm Details'}
+				modalBody={'Please confirm your details below:'}
+			/>
+		</Container>
+	</div>
+);
 
 TutorProfile.getInitialProps = async ({ query }) => {
 	const { data } = await axios.get(`http://localhost:3000/api/tutor/${query.id}`);

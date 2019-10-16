@@ -36,6 +36,9 @@ CREATE TABLE IF NOT EXISTS session_request (
     description TEXT NOT NULL,
     language VARCHAR(100) NOT NULL DEFAULT '',
     sessionLength INT UNSIGNED NOT NULL,
+    tutorId INT UNSIGNED,
+    dateRequested DATETIME NOT NULL,
+    completed BOOLEAN NOT NULL DEFAULT 0,
     FOREIGN KEY (studentId) REFERENCES students(studentId)
     );
     
@@ -51,22 +54,22 @@ CREATE TABLE IF NOT EXISTS tutor_session (
     
 CREATE TABLE IF NOT EXISTS student_rating (
     studentRatingId INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    sessionId INT UNSIGNED NOT NULL,
+    requestId INT UNSIGNED NOT NULL,
     review TEXT,
     politeness INT UNSIGNED NOT NULL,
     openness INT UNSIGNED NOT NULL,
     flexibility INT UNSIGNED NOT NULL,
-    FOREIGN KEY (sessionId) REFERENCES tutor_session(sessionId)
+    FOREIGN KEY (requestId) REFERENCES session_request(requestId)
     );
     
 CREATE TABLE IF NOT EXISTS tutor_rating (
     tutorRatingId INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	sessionId INT UNSIGNED NOT NULL,
+	requestId INT UNSIGNED NOT NULL,
     review TEXT,
     communication INT UNSIGNED NOT NULL,
     qualityService INT UNSIGNED NOT NULL,
     knowledge INT UNSIGNED NOT NULL,
-    FOREIGN KEY (sessionId) REFERENCES tutor_session(sessionId)
+    FOREIGN KEY (requestId) REFERENCES session_request(requestId)
     );
 
 INSERT INTO `students` VALUES 
@@ -76,11 +79,11 @@ INSERT INTO `students` VALUES
 (1003,'madelinestone@hotmail.com','Madeline','Stone','pw4','Canada','1993-08-24','English',NULL);
 
 INSERT INTO `session_request` VALUES 
-(1,1001,'Math','Calculus','Partial Derivatives','I am struggling to understand the meaning of partial derivative. I would like to get some help by going through examples. ','English',30),
-(2,1000,'Science','Biology','Genetics','I have a test tomorrow on Genetics. I would like to get help understanding DNA and genomes. ','English',60),
-(3,1002,'Computer Science','JavaScript','For Loops','I am working on creating an app and cannot get the for loop to work. I would like to get help with this concept. ','English',30),
-(4,1003,'Language','French','English to French','I am trying to write an essay for my french languages class but struggling with verbs and sentence construction.','French',30),
-(6,1000,'Math','Statistics','French Homework','I need help with my french homework about verbs. I do not understand how to complete it. ','English',20);
+(1,1001,'Math','Calculus','Partial Derivatives','I am struggling to understand the meaning of partial derivative. I would like to get some help by going through examples. ','English',30, NULL, NOW(), 1),
+(2,1000,'Science','Biology','Genetics','I have a test tomorrow on Genetics. I would like to get help understanding DNA and genomes. ','English',60, NULL, NOW(), 0),
+(3,1002,'Computer Science','JavaScript','For Loops','I am working on creating an app and cannot get the for loop to work. I would like to get help with this concept. ','English',30, NULL, NOW(), 0),
+(4,1003,'Language','French','English to French','I am trying to write an essay for my french languages class but struggling with verbs and sentence construction.','French',30, NULL, NOW(), 0),
+(6,1000,'Math','Statistics','French Homework','I need help with my french homework about verbs. I do not understand how to complete it. ','English',20, NULL, NOW(), 0);
 
 INSERT INTO `tutors` VALUES 
 (2000,'mikejones@gmail.com','Mike','Jones','pw1','United States of America','Math','Calculus',NULL,NULL),

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Container, Card, CardImg, CardTitle, CardDeck, CardBody } from 'reactstrap';
-import Placeholder from '../static/placeholder.png';
+import Placeholder from '../static/Placeholder.png';
 import Add from '../static/add.png';
 import Eye from '../static/eye.png';
 import Checkmark from '../static/checkmark.png';
