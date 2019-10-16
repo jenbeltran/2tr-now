@@ -25,7 +25,7 @@ const TutorDashboard = ({ posts }) => (
 			{posts.map((requests) => (
 				<CardDeck key={requests.tutorId}>
 					<Card>
-						<a href="tutor_pending">
+						<a href="/tutor_pending">
 							<CardBody>
 								<CardTitle className="Dashboard-cardTitle">View Requests</CardTitle>
 								<CardImg

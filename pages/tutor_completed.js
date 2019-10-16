@@ -28,7 +28,7 @@ const TutorCompleted = ({ posts }) => {
 							{posts.map((requests) => (
 								<tr>
 									<th scope="row">{requests.requestId}</th>
-									<td>{requests.timeStampEnd}</td>
+									<td>{requests.dateRequested}</td>
 									<td>{requests.program}</td>
 									<td>{requests.subject}</td>
 									<td>{requests.topic}</td>
@@ -50,9 +50,8 @@ const TutorCompleted = ({ posts }) => {
 	);
 };
 
-TutorCompleted.getInitialProps = async () => {
-	const { data } = await axios.get('http://localhost:3000/api/join_sessions');
-	return { posts: data };
+TutorCompleted.getInitialProps = async ({ query }) => {
+	const { data } = await axios.get(`http://localhost:3000/api/tutor_completed/${query.id}`);
+	return { ...query, posts: data };
 };
-
 export default TutorCompleted;

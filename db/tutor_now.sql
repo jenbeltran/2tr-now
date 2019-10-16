@@ -79,7 +79,7 @@ INSERT INTO `students` VALUES
 (1003,'madelinestone@hotmail.com','Madeline','Stone','pw4','Canada','1993-08-24','English',NULL);
 
 INSERT INTO `session_request` VALUES 
-(1,1001,'Math','Calculus','Partial Derivatives','I am struggling to understand the meaning of partial derivative. I would like to get some help by going through examples. ','English',30, NULL, NOW(), 1),
+(1,1001,'Math','Calculus','Partial Derivatives','I am struggling to understand the meaning of partial derivative. I would like to get some help by going through examples. ','English',30, 2000, NOW(), 1),
 (2,1000,'Science','Biology','Genetics','I have a test tomorrow on Genetics. I would like to get help understanding DNA and genomes. ','English',60, NULL, NOW(), 0),
 (3,1002,'Computer Science','JavaScript','For Loops','I am working on creating an app and cannot get the for loop to work. I would like to get help with this concept. ','English',30, NULL, NOW(), 0),
 (4,1003,'Language','French','English to French','I am trying to write an essay for my french languages class but struggling with verbs and sentence construction.','French',30, NULL, NOW(), 0),

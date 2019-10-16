@@ -22,6 +22,7 @@ let studentCompletedRoute = require('./studentCompletedRoute');
 //Tutor routes
 let tutorRegisterRoute = require('./tutorRegisterRoute');
 let tutorPendingRoute = require('./tutorPendingRoute');
+let tutorCompletedRoute = require('./tutorCompletedRoute');
 
 // Routes
 let requestDetailsRoute = require('./requestDetailsRoute');
@@ -86,18 +87,16 @@ app.prepare().then(() => {
 		app.render(req, res, '/tutor_view', { id: req.params.id });
 	});
 
-	//TODO:
 	// tutor to see list of pending requests - API and render routes
 	router.get('/api/tutor_pending', tutorPendingRoute.get);
 	router.get('/tutor_pending', (req, res) => {
-		app.render(req, res, '/tutor_pending');
+		app.render(req, res, '/tutor_pending', { id: req.params.id });
 	});
 
-	// TODO:
 	//tutor to see completed sessions
-	router.get('/api/student_completed/:id', studentCompletedRoute.get);
-	router.get('/student_completed/:id', (req, res) => {
-		app.render(req, res, '/student_completed', { id: req.params.id });
+	router.get('/api/tutor_completed/:id', tutorCompletedRoute.get);
+	router.get('/tutor_completed/:id', (req, res) => {
+		app.render(req, res, '/tutor_completed', { id: req.params.id });
 	});
 
 	router.get('*', (req, res) => {
