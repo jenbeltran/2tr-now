@@ -1,10 +1,29 @@
 import axios from 'axios';
+import Router from 'next/router';
+import { Button } from 'reactstrap';
 import ReplyModal from '../components/ReplyModal';
 
 const RequestDetails = ({ posts }) => {
+	const acceptSession = () => {
+		let id = posts[0].requestId;
+		axios
+			.put(`http://localhost:3000/api/request_details/${id}`)
+			.then(Router.push(`/request_details/${id}`))
+			.catch((err) => console.log(err));
+	};
+
 	return (
 		<div>
-			{posts.map((requests) => <h1 key={requests.requestId}>Request ID: {requests.requestId}</h1>)}
+			{posts.map((requests) => (
+				<div key={requests.requestId}>
+					<h1>Request ID: {requests.requestId}</h1>
+					{requests.completed === 1 ? (
+						<h3>COMPLETED</h3>
+					) : (
+						<Button onClick={acceptSession}>Accept Session</Button>
+					)}
+				</div>
+			))}
 			{posts.map((requests) => (
 				<div key={requests.requestId} className="RequestDetails-div1">
 					<a href="/student_view/1001">
@@ -30,6 +49,7 @@ const RequestDetails = ({ posts }) => {
 					culpa qui officia deserunt mollit anim id est laborum
 				</p>
 			</div>
+
 			<ReplyModal />
 		</div>
 	);

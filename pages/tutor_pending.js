@@ -8,9 +8,9 @@ const TutorPending = ({ posts }) => {
 			<Container>
 				<h1>View Pending Requests</h1>
 
-				<div class="table-wrapper">
-					<table class="table table-light table-hover">
-						<thead class="thead-light">
+				<div className="table-wrapper">
+					<table className="table table-light table-hover">
+						<thead className="thead-light">
 							<tr>
 								<th scope="col">Request ID</th>
 								<th scope="col">Date</th>
@@ -24,7 +24,7 @@ const TutorPending = ({ posts }) => {
 
 						<tbody>
 							{posts.map((requests) => (
-								<tr>
+								<tr key={requests.requestId}>
 									<th scope="row">{requests.requestId}</th>
 									<td>{requests.dateRequested}</td>
 									<td>{requests.program}</td>
@@ -35,7 +35,6 @@ const TutorPending = ({ posts }) => {
 										<a href={`/request_details/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
-										<Button>Accept</Button>
 									</td>
 								</tr>
 							))}
@@ -48,7 +47,7 @@ const TutorPending = ({ posts }) => {
 };
 
 TutorPending.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/tutor_pending`);
+	const { data } = await axios.get(`http://localhost:3000/api/tutor_pending/${query.id}`);
 	return { ...query, posts: data };
 };
 

@@ -9,9 +9,9 @@ const TutorCompleted = ({ posts }) => {
 			<Container>
 				<h1>Completed Tutor Sessions</h1>
 
-				<div class="table-wrapper">
-					<table class="table table-light table-hover">
-						<thead class="thead-light">
+				<div className="table-wrapper">
+					<table className="table table-light table-hover">
+						<thead className="thead-light">
 							<tr>
 								<th scope="col">Request ID</th>
 								<th scope="col">Date</th>
@@ -26,7 +26,7 @@ const TutorCompleted = ({ posts }) => {
 
 						<tbody>
 							{posts.map((requests) => (
-								<tr>
+								<tr key={requests.requestId}>
 									<th scope="row">{requests.requestId}</th>
 									<td>{requests.dateRequested}</td>
 									<td>{requests.program}</td>
@@ -35,7 +35,7 @@ const TutorCompleted = ({ posts }) => {
 									<td>{requests.sessionLength}</td>
 									<td>{requests.studentId}</td>
 									<td>
-										<a href="/request_details">
+										<a href={`/request_details/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
 										<TutorRateModal />

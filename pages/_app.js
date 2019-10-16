@@ -12,7 +12,8 @@ class MyApp extends App {
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx);
 		}
-		console.log(ctx.query);
+		console.log(ctx.req.params);
+		console.log(ctx.req.session);
 		return { pageProps };
 	}
 

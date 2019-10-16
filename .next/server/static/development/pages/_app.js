@@ -2251,7 +2251,8 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    console.log(ctx.query);
+    console.log(ctx.req.params);
+    console.log(ctx.req.session);
     return {
       pageProps
     };
