@@ -34,7 +34,7 @@ app.prepare().then(() => {
 	//student dashboard route
 	router.get('/api/student/:id', studentRegisterRoute.get);
 	router.get('/student_dashboard/:id', (req, res) => {
-		app.render(req, res, '/student_dashboard', { id: req.params.id });
+		app.render(req, res, '/student_dashboard', { studentId: req.params.id });
 	});
 
 	//student profile page

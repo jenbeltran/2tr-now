@@ -18,7 +18,7 @@ const RequestDetails = ({ posts }) => {
 				</div>
 			))}
 			<div className="RequestDetails-div2">
-				<a href="/tutor_view">
+				<a href="/tutor_view/2000">
 					<h6>MIKE JONES</h6>
 				</a>
 				<h6>REPLY:</h6>

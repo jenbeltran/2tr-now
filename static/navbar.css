@@ -4,20 +4,20 @@
 	font-style: normal;
 	font-weight: bold;
 	font-size: 60px;
-	color: #265231;
+	color: black;
 }
 
 .Navbar-button1 {
-	border-color: #265231;
-	color: #265231;
+	border-color: black;
+	color: black;
 	position: absolute;
 	left: 84.24%;
 	top: 4%;
 }
 
 .Navbar-button2 {
-	border-color: #265231;
-	color: #265231;
+	border-color: black;
+	color: black;
 	position: absolute;
 	left: 91.24%;
 	top: 4%;
@@ -28,7 +28,7 @@
 	font-family: Amatic SC;
 	font-size: 40px;
 	font-weight: bold;
-	color: #265231;
+	color: black;
 	margin-top: 0;
 	padding-top: 0;
 	margin-bottom: 0;
@@ -51,5 +51,5 @@
 	padding-top: 0;
 	margin-bottom: 0;
 	padding-bottom: 0;
-	color: #265231;
+	color: black;
 }

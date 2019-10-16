@@ -72,6 +72,14 @@ CREATE TABLE IF NOT EXISTS tutor_rating (
     FOREIGN KEY (requestId) REFERENCES session_request(requestId)
     );
 
+CREATE TABLE IF NOT EXISTS messages (
+    messageId INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    requestId INT UNSIGNED NOT NULL,
+    message TEXT NOT NULL, 
+    timestamp DATETIME NOT NULL,
+    FOREIGN KEY (requestId) REFERENCES session_request (requestId)
+);
+
 INSERT INTO `students` VALUES 
 (1000,'sthompson@gmail.com','Sydney','Thompson','pw1','Canada','2001-01-02','Science',NULL),
 (1001,'alexsmith@gmail.com','Alex','Smith','pw2','United States','1972-06-12','Math',NULL),
@@ -97,3 +105,8 @@ INSERT INTO `tutor_session` VALUES
 (2,2001,2,'2019-06-02 03:00:00','2019-06-01 04:00:00'),
 (3,2002,3,'2019-08-05 17:00:00','2019-08-05 17:30:00'),
 (4,2004,4,'2019-08-05 05:30:00','2019-08-05 06:00:00');
+
+INSERT INTO `messages` VALUES
+(1, 3, 'I can help with your request. Are you free to meet at 5:30ET? Here is my skype username tutor101', '2019-06-02 00:30:00'),
+(2, 1, 'Please add me on Skype for our tutor session to begin. You are free to ask me all your questions at that point. My username is MrTutor44', '2019-06-02 00:30:00'),
+(3, 2, 'I can call you on Skype in 10 minute to discuss your question. Please add my username tutorbot', '2019-06-02 00:30:00');
