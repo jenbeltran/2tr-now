@@ -7,7 +7,7 @@ const TutorLogin = () => (
 				<p className="Login-p">Tutor Email:</p>
 				<input className="Login-input" type="email" />
 				<p className="Login-p">Tutor Password:</p>
-				<input className="Login-input" type="password" />
+				<input className="Login-input" type="current-password" />
 			</form>
 		</div>
 		<Button className="Login-button1" outline>

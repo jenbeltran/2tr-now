@@ -27,7 +27,7 @@ function postStudentRegisterRoute(req, res, next) {
 
 //student dashboard
 function getStudentRegisterRoute(req, res, next) {
-	db.query('SELECT * FROM students WHERE studentId=?', [ req.params.studentId ], (error, results, fields) => {
+	db.query('SELECT * FROM students WHERE studentId=?', [ req.params.id ], (error, results, fields) => {
 		res.json(results);
 	});
 }

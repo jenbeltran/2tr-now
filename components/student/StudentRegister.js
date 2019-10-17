@@ -96,7 +96,7 @@ const StudentRegister = () => {
 				<p className="Register-p">Email:</p>
 				<input type="email" name="studentEmail" value={studentEmail} onChange={handleChangeStudentEmail} />
 				<p className="Register-p">Password:</p>
-				<input type="password" name="password" value={password} onChange={handleChangePassword} />
+				<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
 
 				<table>
 					<tbody>
