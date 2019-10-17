@@ -112,7 +112,7 @@ const TutorRegister = (props) => {
 				<p className="Register-p">Email:</p>
 				<input type="email" name="tutorEmail" value={tutorEmail} onChange={handleChangeTutorEmail} />
 				<p className="Register-p">Password:</p>
-				<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
+				<input type="password" name="password" value={password} onChange={handleChangePassword} />
 
 				<table>
 					<tbody>

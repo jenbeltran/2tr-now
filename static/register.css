@@ -1,11 +1,11 @@
 .Register-student {
 	position: absolute;
-	left: 4.05%;
+	margin-left: 30px;
 }
 
 .Register-tutor {
 	position: absolute;
-	left: 12.05%;
+	margin-left: 155px;
 }
 
 .Register-div {
