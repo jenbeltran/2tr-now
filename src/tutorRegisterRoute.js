@@ -1,24 +1,30 @@
 const db = require('../db/database');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 // student registration
 function postTutorRegisterRoute(req, res, next) {
-	db.query(
-		'INSERT INTO tutors (tutorEmail, firstName, lastName, password, location, program, specialty, criminalRecord) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-		[
-			req.body.tutorEmail,
-			req.body.firstName,
-			req.body.lastName,
-			req.body.password,
-			req.body.location,
-			req.body.program,
-			req.body.specialty,
-			req.body.file
-		],
-		(error, results, fields) => {
-			console.log(req.body.file);
-			res.json(results);
-		}
-	);
+	const password = req.body.password;
+	bcrypt.hash(password, saltRounds, function(err, hash) {
+		db.query(
+			'INSERT INTO tutors (tutorEmail, firstName, lastName, password, location, program, specialty, criminalRecord) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+			[
+				req.body.tutorEmail,
+				req.body.firstName,
+				req.body.lastName,
+				hash,
+				req.body.location,
+				req.body.program,
+				req.body.specialty,
+				req.body.file
+			],
+			(error, results, fields) => {
+				console.log(req.body.file);
+				res.json(results);
+			}
+		);
+	});
 }
 
 //student dashboard
