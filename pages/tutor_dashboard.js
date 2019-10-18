@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { Container, Card, CardImg, CardTitle, CardDeck, CardBody } from 'reactstrap';
-import Placeholder from '../static/Placeholder.png';
+import Placeholder from '../static/placeholder.png';
 import Eye from '../static/eye.png';
 import Checkmark from '../static/checkmark.png';
 
@@ -14,6 +14,8 @@ const TutorDashboard = ({ posts }) => (
 						<td>
 							<img src={Placeholder} alt="placeholder" width="125px;" />
 						</td>
+					</tr>
+					<tr>
 						<td>
 							<h1>Welcome, {requests.firstName}!</h1>
 						</td>
@@ -30,7 +32,7 @@ const TutorDashboard = ({ posts }) => (
 								<CardTitle className="Dashboard-cardTitle">View Requests</CardTitle>
 								<CardImg
 									className="TutorDashboard-cardImg"
-									src={Eye}
+									src={Eye} 
 									alt="View/Accept Pending Requests"
 								/>
 							</CardBody>

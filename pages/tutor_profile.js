@@ -14,15 +14,17 @@ import SpecialtyScience from '../components/specialty/SpecialtyScience';
 const TutorProfile = ({ posts }) => (
 	<div>
 		{posts.map((requests) => (
-			<table key={requests.tutorId} className="Dashboard-table">
+			<table key={requests.tutorId} className="profile-table">
 				<tr>
 					<td>
 						<Modal
-							modalButton={<img src={Placeholder} alt="placeholder" width="125px;" />}
+							modalButton={<img src={Placeholder} alt="placeholder" className="modal-img" />}
 							modalHeader={'Profile Photo Upload'}
 							modalBody={'Please upload a profile photo'}
 						/>
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<h1>
 							{requests.firstName} {requests.lastName}
