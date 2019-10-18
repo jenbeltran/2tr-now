@@ -112,7 +112,7 @@ const TutorRegister = (props) => {
 				<p className="Register-p">Email:</p>
 				<input type="email" name="tutorEmail" value={tutorEmail} onChange={handleChangeTutorEmail} />
 				<p className="Register-p">Password:</p>
-				<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
+				<input type="password" name="password" value={password} onChange={handleChangePassword} />
 
 				<table>
 					<tbody>
@@ -121,6 +121,8 @@ const TutorRegister = (props) => {
 								<p className="Register-p">Location:</p>
 								<Countries name="location" value={location} onChange={handleChangeLocation} />
 							</td>
+							</tr>
+							<tr>
 							<td className="Register-record">
 								<p className="Register-p">Criminal Record:</p>
 								<input type="file" name="file" onChange={handleChangeCriminalRecord} />

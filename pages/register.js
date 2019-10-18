@@ -15,14 +15,14 @@ const Register = () => {
 
 	return (
 		<div>
-			<h1>Register a new account!</h1>
+			<h1 className="registerh1">Register a new account!</h1>
 			<div className="Register-student">
-				<input type="radio" name="radio-group" value="student" onClick={radioStudent} />
-				<label htmlFor="student">Student?</label>
+				<input type="radio"  name="radio-group" value="student" onClick={radioStudent} />
+				<label className="radio-option3" htmlFor="student">Student?</label>
 			</div>
 			<div className="Register-tutor">
 				<input type="radio" name="radio-group" value="tutor" onClick={radioTutor} />
-				<label htmlFor="tutor">Tutor?</label>
+				<label className="radio-option3" htmlFor="tutor">Tutor?</label>
 			</div>
 			{radio === 'student' ? <StudentRegister /> : <TutorRegister />}
 		</div>

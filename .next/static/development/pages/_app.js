@@ -25848,7 +25848,7 @@ function (_App) {
       }), __jsx("link", {
         rel: "stylesheet",
         href: "https://unpkg.com/react-day-picker/lib/style.css"
-      })), __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_11__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
+      })), __jsx(_components_navbars_Navbar__WEBPACK_IMPORTED_MODULE_9__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
     }
   }], [{
     key: "getInitialProps",

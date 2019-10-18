@@ -1,25 +1,33 @@
 .Register-student {
 	position: absolute;
-	margin-left: 30px;
+	margin-left: 6%;
 }
 
 .Register-tutor {
 	position: absolute;
-	margin-left: 155px;
+	left:105px;
+	margin-left: 6%;
 }
 
 .Register-div {
 	position: absolute;
-	left: 3.97%;
-	right: 75.47%;
-	top: 25.3%;
-	bottom: 50.68%;
+	margin-left: 6%;
+	margin-top:30px;
 	opacity: 1;
 }
 
 .Register-p {
 	margin-bottom: 0;
 	padding-bottom: 0;
-	margin-top: 3%;
-	padding-top: 3%;
+	margin-top: 5px;
+	padding-top: 5px;
+	left:709px;
+}
+
+.registerh1 {
+	margin-left: 15px;
+}
+
+.radio-option3 {
+	margin-left: 8px;
 }

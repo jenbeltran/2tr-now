@@ -34,7 +34,7 @@ const TutorLogin = () => {
 					<p className="Login-p">Tutor Email:</p>
 					<input type="email" value={tutorEmail} onChange={handleChangeTutorEmail} />
 					<p className="Login-p">Tutor Password:</p>
-					<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
+					<input type="password" name="password" value={password} onChange={handleChangePassword} />
 				</form>
 			</div>
 			<Button className="Login-button1" onClick={handleSubmit} outline>
