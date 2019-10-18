@@ -5,10 +5,13 @@
   ],
   "pages": {
     "/_app": [
+<<<<<<< HEAD
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/_error": [
+=======
+>>>>>>> 440fa85326b80582bb12d8ffe7020cc649dd6a28
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -16,15 +19,20 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+<<<<<<< HEAD
     "/student_profile": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/tutor_completed": [
+=======
+    "/login": [
+>>>>>>> 440fa85326b80582bb12d8ffe7020cc649dd6a28
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/tutor_dashboard": [
+<<<<<<< HEAD
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -33,6 +41,8 @@
       "static/runtime/main.js"
     ],
     "/tutor_profile": [
+=======
+>>>>>>> 440fa85326b80582bb12d8ffe7020cc649dd6a28
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
