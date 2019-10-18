@@ -1,16 +1,13 @@
 .Login-h1 {
 	position: absolute;
-	left: 13.05%;
-	right: 60.79%;
-	top: 20.68%;
-	bottom: 64.34%;
+	margin-left: 8%;
+	top: 100px;
 }
 
 .Login-div {
 	position: absolute;
-	left: 10.05%;
-	top: 30.68%;
-	bottom: 64.34%;
+	margin-left: 8%;
+	top: 210px;
 }
 
 .Login-p {
@@ -19,8 +16,9 @@
 }
 
 .Login-input {
-	margin-right: 70%;
-	padding-right: 70%;
+	margin-right: 100px;
+	margin-top:5px;
+	padding-right: 100px;
 	border-radius: 10px;
 	box-shadow: 0px 0px 5px grey;
 }
@@ -30,32 +28,36 @@
 }
 
 .Login-button1 {
-	border-color: #265231;
-	color: #265231;
+	border-color: black;
+	color: black;
 	position: absolute;
-	left: 17%;
-	top: 53%;
-	margin-left: 25px;
-	padding-left: 25px;
-	margin-right: 25px;
-	padding-right: 25px;
+	margin-left: 13%;
+	top: 350px;
 }
 
 .Login-h4 {
 	position: absolute;
-	left: 13.05%;
-	top: 65.68%;
-	color: #265231;
+	margin-left: 8%;
+	top: 480px;
+	color: black;
 }
 
 .Login-button2 {
-	border-color: #265231;
-	color: #265231;
+	border-color: black;
+	color: black;
 	position: absolute;
-	left: 15%;
-	top: 70%;
-	margin-left: 25px;
-	padding-left: 25px;
-	margin-right: 25px;
-	padding-right: 25px;
+	margin-left: 13%;
+	top: 520px;
+}
+
+.radio-option {
+	margin-left: 11%;
+	margin-top: 90px;
+	padding: 5%;
+	margin-right:8px;
+}
+.radio-option1 {
+	margin-left: 2%;
+	margin-top: 90px;
+	margin-right:8px;
 }

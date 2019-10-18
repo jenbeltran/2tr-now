@@ -2304,7 +2304,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     }), __jsx("link", {
       rel: "stylesheet",
       href: "https://unpkg.com/react-day-picker/lib/style.css"
-    })), __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    })), __jsx(_components_navbars_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
   }
 
 }

@@ -29,9 +29,9 @@ const StudentLogin = () => {
 			<div className="Login-div">
 				<form>
 					<p className="Login-p">Student Email:</p>
-					<input type="email" name="studentEmail" value={studentEmail} onChange={handleChangeStudentEmail} />
+					<input type="email" className="Login-input" name="studentEmail" value={studentEmail} onChange={handleChangeStudentEmail} />
 					<p className="Login-p">Student Password:</p>
-					<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
+					<input type="password" className="Login-input" name="password" value={password} onChange={handleChangePassword} />
 				</form>
 			</div>
 			<Button className="Login-button1" onClick={handleSubmit} outline>

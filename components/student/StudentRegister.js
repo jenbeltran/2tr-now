@@ -96,7 +96,7 @@ const StudentRegister = () => {
 				<p className="Register-p">Email:</p>
 				<input type="email" name="studentEmail" value={studentEmail} onChange={handleChangeStudentEmail} />
 				<p className="Register-p">Password:</p>
-				<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
+				<input type="password" name="password" value={password} onChange={handleChangePassword} />
 
 				<table>
 					<tbody>
@@ -105,6 +105,8 @@ const StudentRegister = () => {
 								<p className="Register-p">Location:</p>
 								<Countries name="location" value={location} onChange={handleChangeLocation} />
 							</td>
+							</tr>
+							<tr>
 							<td>
 								<p className="Register-p">Program:</p>
 								<Programs name="program" value={program} onChange={handleChangeProgram} />

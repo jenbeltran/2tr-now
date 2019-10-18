@@ -18,15 +18,13 @@ const Login = () => {
 		<div>
 			<h1 className="Login-h1">Welcome Back!</h1>
 			<div>
-				<input type="radio" name="radio-group" value="student" onClick={radioStudent} />
+				<input type="radio" className="radio-option" name="radio-group" value="student" onClick={radioStudent} />
 				<label htmlFor="student">Student?</label>
-			</div>
-			<div>
-				<input type="radio" name="radio-group" value="tutor" onClick={radioTutor} />
+				<input type="radio" className="radio-option1" name="radio-group" value="tutor" onClick={radioTutor} />
 				<label htmlFor="tutor">Tutor?</label>
 			</div>
 			{radio === 'student' ? <StudentLogin /> : <TutorLogin />}
-			<h4 className="Login-h4">Don't have an account yet?</h4>
+			<h5 className="Login-h4">Don't have an account yet?</h5>
 			<Button className="Login-button2" outline href="register">
 				Register
 			</Button>
