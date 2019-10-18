@@ -1,28 +1,25 @@
 .Dashboard-table {
-	width: 40%;
-	margin-left: 25%;
-	padding-left: 25%;
-	margin-top: 2%;
-	padding-top: 2%;
-	margin-bottom: 2%;
-	padding-bottom: 2%;
+	width: 100%;
+	text-align: center;
 }
 
 .Dashboard-cardTitle {
 	color: #707070;
-	font-size: 30px;
+	font-size: 4vw;
 	line-height: 64px;
 	text-align: center;
 }
 
 .TutorDashboard-cardImg {
-	height: 125px;
-	width: 125px;
-	margin-left: 40%;
+	height: auto;
+	width: 100px;
+	display: block;
+    margin: 0 auto;
 }
 
 .StudentDashboard-cardImg {
-	height: 125px;
-	width: 125px;
-	margin-left: 30%;
+	height: auto;
+	width: 100px;
+	display: block;
+    margin: 0 auto;
 }
