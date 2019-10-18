@@ -21,6 +21,7 @@ let studentPendingRoute = require('./studentPendingRoute');
 let studentCompletedRoute = require('./studentCompletedRoute');
 
 //Tutor routes
+let tutorLoginRoute = require('./tutorLoginRoute');
 let tutorRegisterRoute = require('./tutorRegisterRoute');
 let tutorPendingRoute = require('./tutorPendingRoute');
 let tutorCompletedRoute = require('./tutorCompletedRoute');
@@ -30,7 +31,7 @@ let requestDetailsRoute = require('./requestDetailsRoute');
 
 app.prepare().then(() => {
 	//student login route
-	router.post('api/student_login/:id', studentLoginRoute.post);
+	router.post('/api/student_login', studentLoginRoute.post);
 
 	//student registration which redirects to login page
 	router.post('/api/student', studentRegisterRoute.post);
@@ -38,17 +39,17 @@ app.prepare().then(() => {
 	//student dashboard route
 	router.get('/api/student/:id', studentRegisterRoute.get);
 	router.get('/student_dashboard/:id', (req, res) => {
-		app.render(req, res, '/student_dashboard', { id: req.params.id });
+		app.render(req, res, '/student_dashboard', { id: req.params.id, studentId: req.session.studentId });
 	});
 
 	//student profile page
 	router.get('/student_profile/:id', (req, res) => {
-		app.render(req, res, '/student_profile', { id: req.params.id });
+		app.render(req, res, '/student_profile', { id: req.params.id, studentId: req.session.studentId });
 	});
 
 	//student profile page from tutor view
 	router.get('/student_view/:id', (req, res) => {
-		app.render(req, res, '/student_view', { id: req.params.id });
+		app.render(req, res, '/student_view', { id: req.params.id, studentId: req.session.studentId });
 	});
 
 	//student to add request for tutor session
@@ -57,14 +58,18 @@ app.prepare().then(() => {
 	// student to see list of pending requests - API and render routes
 	router.get('/api/student_pending/:id', studentPendingRoute.get);
 	router.get('/student_pending/:id', (req, res) => {
-		app.render(req, res, '/student_pending', { id: req.params.id });
+		app.render(req, res, '/student_pending', { id: req.params.id, studentId: req.session.studentId });
 	});
 
 	//student to see completed sessions
 	router.get('/api/student_completed/:id', studentCompletedRoute.get);
 	router.get('/student_completed/:id', (req, res) => {
-		app.render(req, res, '/student_completed', { id: req.params.id });
+		app.render(req, res, '/student_completed', { id: req.params.id, studentId: req.session.studentId });
 	});
+
+	// TUTOR ROUTES
+	//tutor login route
+	router.post('/api/tutor_login', tutorLoginRoute.post);
 
 	//tutor registration which redirects to login page
 	router.post('/api/tutor', tutorRegisterRoute.post);

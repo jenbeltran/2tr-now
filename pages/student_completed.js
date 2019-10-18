@@ -26,7 +26,7 @@ const StudentCompleted = ({ posts }) => {
 
 						<tbody>
 							{posts.map((requests) => (
-								<tr>
+								<tr key={requests.requestId}>
 									<th scope="row">{requests.requestId}</th>
 									<td>{requests.timeStampEnd}</td>
 									<td>{requests.program}</td>

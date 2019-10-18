@@ -6,9 +6,11 @@ import { Button } from 'reactstrap';
 const StudentLogin = () => {
 	const [ studentEmail, setStudentEmail ] = useState();
 	const [ password, setPassword ] = useState();
+	const [ id, setId ] = useState();
 
 	const handleChangeStudentEmail = (e) => {
 		setStudentEmail(e.target.value);
+		setId(1001);
 	};
 
 	const handleChangePassword = (e) => {
@@ -17,11 +19,12 @@ const StudentLogin = () => {
 
 	const handleSubmit = () => {
 		axios
-			.post('http://localhost:3000/api/student_login/:id', {
+			.post('http://localhost:3000/api/student_login', {
 				studentEmail : studentEmail,
 				password     : password
 			})
-			.then(Router.push(`/student_dashboard/1001`))
+			.then((res) => console.log(res))
+			.then(Router.push(`/student_dashboard/${id}`))
 			.catch((err) => console.log(err));
 	};
 	return (
@@ -29,7 +32,7 @@ const StudentLogin = () => {
 			<div className="Login-div">
 				<form>
 					<p className="Login-p">Student Email:</p>
-					<input type="email" name="studentEmail" value={studentEmail} onChange={handleChangeStudentEmail} />
+					<input type="email" value={studentEmail} onChange={handleChangeStudentEmail} />
 					<p className="Login-p">Student Password:</p>
 					<input type="current-password" name="password" value={password} onChange={handleChangePassword} />
 				</form>

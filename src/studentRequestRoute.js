@@ -5,7 +5,7 @@ function postStudentRequestRoute(req, res, next) {
 	db.query(
 		'INSERT INTO session_request (studentId, program, subject, language, sessionLength, topic, description) VALUES (?, ?, ?, ?, ?, ?, ?)',
 		[
-			req.body.studentId,
+			req.session.studentId,
 			req.body.program,
 			req.body.subject,
 			req.body.language,
@@ -14,6 +14,7 @@ function postStudentRequestRoute(req, res, next) {
 			req.body.description
 		],
 		(error, results, fields) => {
+			console.log(req.session.studentId);
 			res.json(results);
 		}
 	);
