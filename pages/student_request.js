@@ -21,7 +21,7 @@ const StudentRequest = (event) => {
 	const [ description, setDescription ] = useState();
 
 	const handleChangeStudentId = (e) => {
-		setStudentId(req.session.studentId);
+		setStudentId(e.target.value);
 	};
 
 	const handleChangeProgram = (e) => {

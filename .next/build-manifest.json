@@ -4,64 +4,19 @@
     "static/development/dll/dll_397dc449097af0b4e992.js.map"
   ],
   "pages": {
-    "/": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/_app": [
-<<<<<<< HEAD
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/_error": [
-=======
->>>>>>> 440fa85326b80582bb12d8ffe7020cc649dd6a28
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-<<<<<<< HEAD
-    "/index": [
+    "/student_pending": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-=======
-    "/student_dashboard": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-<<<<<<< HEAD
-    "/student_profile": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/tutor_completed": [
-=======
->>>>>>> cba698483112222b4ec411ad29a89b4120b62be4
-    "/login": [
->>>>>>> 440fa85326b80582bb12d8ffe7020cc649dd6a28
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/next/dist/pages/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/student_dashboard": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/tutor_dashboard": [
-<<<<<<< HEAD
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/tutor_pending": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/tutor_profile": [
-=======
->>>>>>> 440fa85326b80582bb12d8ffe7020cc649dd6a28
+    "/student_request": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

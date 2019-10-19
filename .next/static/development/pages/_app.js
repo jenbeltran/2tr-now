@@ -25876,12 +25876,11 @@ function (_App) {
                 pageProps = _context.sent;
 
               case 6:
-                console.log(ctx.req.session);
                 return _context.abrupt("return", {
                   pageProps: pageProps
                 });
 
-              case 8:
+              case 7:
               case "end":
                 return _context.stop();
             }
