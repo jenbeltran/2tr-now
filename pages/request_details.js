@@ -17,7 +17,7 @@ const RequestDetails = ({ posts }) => {
 			{posts.map((requests) => (
 				<div key={requests.requestId}>
 					<h1>Request ID: {requests.requestId}</h1>
-					{requests.completed === 1 ? (
+					{requests.completed === 2 ? (
 						<h3>COMPLETED</h3>
 					) : (
 						<Button onClick={acceptSession}>Accept Session</Button>

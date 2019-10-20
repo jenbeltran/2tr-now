@@ -12,11 +12,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_pending": [
+    "/request_details": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_request": [
+    "/tutor_completed": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_pending": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -20,7 +20,6 @@ const StudentDashboard = ({ posts }) => (
 						<h1>Welcome, {requests.firstName}!</h1>
 					</td>
 				</tr>
-
 			</table>
 		))}
 		<Container>

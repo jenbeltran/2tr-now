@@ -24,6 +24,7 @@ let studentCompletedRoute = require('./studentCompletedRoute');
 let tutorLoginRoute = require('./tutorLoginRoute');
 let tutorRegisterRoute = require('./tutorRegisterRoute');
 let tutorPendingRoute = require('./tutorPendingRoute');
+let tutorActiveRoute = require('./tutorActiveRoute');
 let tutorCompletedRoute = require('./tutorCompletedRoute');
 
 // Routes
@@ -94,6 +95,12 @@ app.prepare().then(() => {
 	router.get('/api/tutor_pending/:id', tutorPendingRoute.get);
 	router.get('/tutor_pending', (req, res) => {
 		app.render(req, res, '/tutor_pending', { id: req.params.id });
+	});
+
+	// tutor to see list of active requests - API and render routes
+	router.get('/api/tutor_active/:id', tutorActiveRoute.get);
+	router.get('/tutor_active', (req, res) => {
+		app.render(req, res, '/tutor_active', { id: req.params.id });
 	});
 
 	//tutor to see completed sessions

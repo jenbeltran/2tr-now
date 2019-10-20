@@ -7,7 +7,7 @@ function getRequestDetailsRoute(req, res, next) {
 	});
 }
 
-// to change request from pending to completed
+// to change request from pending to active
 function acceptRequestRoute(req, res, next) {
 	db.query(
 		'UPDATE session_request SET completed=1, tutorId=2000 WHERE requestId=?',
@@ -18,4 +18,14 @@ function acceptRequestRoute(req, res, next) {
 	);
 }
 
-module.exports = { get: getRequestDetailsRoute, put: acceptRequestRoute };
+// to change request from active to complete
+function acceptRequestRouteComplete(req, res, next) {
+	db.query(
+		'UPDATE session_request SET completed=2, tutorId=2000 WHERE requestId=?',
+		[ req.params.id ],
+		(error, results, fields) => {
+			res.json(results);
+		}
+	);
+}
+module.exports = { get: getRequestDetailsRoute, put: acceptRequestRoute, put: acceptRequestRouteComplete};
