@@ -9,6 +9,8 @@ function getRequestDetailsRoute(req, res, next) {
 
 // to change request from pending to active
 function acceptRequestRoute(req, res, next) {
+	console.log("accept request route:");
+	console.log(req.body);
 	db.query(
 		'UPDATE session_request SET completed=1, tutorId=2000 WHERE requestId=?',
 		[ req.params.id ],
@@ -18,8 +20,10 @@ function acceptRequestRoute(req, res, next) {
 	);
 }
 
-// to change request from active to complete
-function acceptRequestRouteComplete(req, res, next) {
+// to change request from active to completed
+function completeRequestRoute(req, res, next) {
+	console.log("complete request route:");
+	console.log(req.body);
 	db.query(
 		'UPDATE session_request SET completed=2, tutorId=2000 WHERE requestId=?',
 		[ req.params.id ],
@@ -28,4 +32,5 @@ function acceptRequestRouteComplete(req, res, next) {
 		}
 	);
 }
-module.exports = { get: getRequestDetailsRoute, put: acceptRequestRoute, put: acceptRequestRouteComplete};
+
+module.exports = { get: getRequestDetailsRoute, put: acceptRequestRoute, put2: completeRequestRoute};

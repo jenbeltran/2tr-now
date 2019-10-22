@@ -16,6 +16,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/tutor_active": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/tutor_completed": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

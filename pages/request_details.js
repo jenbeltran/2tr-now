@@ -4,24 +4,44 @@ import { Button } from 'reactstrap';
 import ReplyModal from '../components/ReplyModal';
 
 const RequestDetails = ({ posts }) => {
-	const acceptSession = () => {
+	const completeSession = () => {
 		let id = posts[0].requestId;
+		console.log("Complete Session");
 		axios
-			.put(`http://localhost:3000/api/request_details/${id}`)
-			.then(Router.push(`/request_details/${id}`))
+			.put(`http://localhost:3000/api/request_details2/${id}`)
+			.then(Router.push(`/tutor_completed`))
 			.catch((err) => console.log(err));
 	};
+
+		const acceptSession = () => {
+			let id = posts[0].requestId;
+			console.log("Accept Session");
+			axios
+				.put(`http://localhost:3000/api/request_details/${id}`)
+				.then(Router.push(`/tutor_active`))
+				.catch((err) => console.log(err));
+		};
+	
+
+
+let sessionTag;
+	if (posts[0].completed === 2) {
+		console.log(posts[0].completed);
+		sessionTag = <h1>Completed</h1>;
+	} else if (posts[0].completed === 1) {
+		console.log(posts[0].completed);
+		sessionTag = <Button onClick={completeSession}>Complete Session</Button>; 
+	} else  {
+		console.log(posts[0].completed);
+		sessionTag = <Button onClick={acceptSession}>Accept Session</Button>; 
+	} 
 
 	return (
 		<div>
 			{posts.map((requests) => (
 				<div key={requests.requestId}>
 					<h1>Request ID: {requests.requestId}</h1>
-					{requests.completed === 2 ? (
-						<h3>COMPLETED</h3>
-					) : (
-						<Button onClick={acceptSession}>Accept Session</Button>
-					)}
+					{sessionTag}
 				</div>
 			))}
 			{posts.map((requests) => (

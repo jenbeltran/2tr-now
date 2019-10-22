@@ -115,12 +115,16 @@ app.prepare().then(() => {
 		app.render(req, res, '/request_details', { id: req.params.id });
 	});
 
-	//tutor to change pending request to completed
+	//tutor to change pending request to active
 	router.put('/api/request_details/:id', requestDetailsRoute.put);
-
 	router.get('*', (req, res) => {
 		return handle(req, res);
 	});
+
+	//tutor to change active to completed
+	router.put('/api/request_details2/:id', requestDetailsRoute.put2);
 });
+
+
 
 module.exports = router;
