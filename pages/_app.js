@@ -12,6 +12,8 @@ class MyApp extends App {
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx);
 		}
+		console.log('session from app.js');
+		console.log(ctx.req.session.studentId);
 		return { pageProps };
 	}
 
@@ -45,7 +47,7 @@ class MyApp extends App {
 
 					<link rel="stylesheet" href="https://unpkg.com/react-day-picker/lib/style.css" />
 				</Head>
-				<TutorNavbar />
+				<StudentNavbar />
 				<Component {...pageProps} />
 				<Footer />
 			</div>

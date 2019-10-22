@@ -66,7 +66,9 @@ const StudentDashboard = ({ posts }) => (
 );
 
 StudentDashboard.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/student/${query.id}`);
+	console.log('student dashboard front end');
+	console.log(query);
+	const { data } = await axios.get(`http://localhost:3000/api/student/${query.studentId}`);
 	return { ...query, posts: data };
 };
 

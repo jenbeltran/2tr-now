@@ -2257,6 +2257,8 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       pageProps = await Component.getInitialProps(ctx);
     }
 
+    console.log('session from app.js');
+    console.log(ctx.req.session.studentId);
     return {
       pageProps
     };
@@ -2308,7 +2310,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     }), __jsx("link", {
       rel: "stylesheet",
       href: "https://unpkg.com/react-day-picker/lib/style.css"
-    })), __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    })), __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
   }
 
 }

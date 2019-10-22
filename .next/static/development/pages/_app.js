@@ -25854,7 +25854,7 @@ function (_App) {
       }), __jsx("link", {
         rel: "stylesheet",
         href: "https://unpkg.com/react-day-picker/lib/style.css"
-      })), __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_11__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
+      })), __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_10__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
     }
   }], [{
     key: "getInitialProps",
@@ -25882,11 +25882,13 @@ function (_App) {
                 pageProps = _context.sent;
 
               case 6:
+                console.log('session from app.js');
+                console.log(ctx.req.session.studentId);
                 return _context.abrupt("return", {
                   pageProps: pageProps
                 });
 
-              case 7:
+              case 9:
               case "end":
                 return _context.stop();
             }
