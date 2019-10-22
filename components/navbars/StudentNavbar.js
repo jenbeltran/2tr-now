@@ -48,6 +48,11 @@ const StudentNavbar = () => {
 							</NavLink>
 						</NavItem>
 						<NavItem>
+							<NavLink className="Navbar-link" href="/student_active/1001">
+								Active Requests
+							</NavLink>
+						</NavItem>
+						<NavItem>
 							<NavLink className="Navbar-link" href="/student_completed/1001">
 								Completed Sessions
 							</NavLink>

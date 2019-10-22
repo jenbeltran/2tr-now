@@ -117,6 +117,9 @@ var StudentNavbar = function StudentNavbar() {
     href: "/student_pending/1001"
   }, "Pending Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
+    href: "/student_active/1001"
+  }, "Active Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    className: "Navbar-link",
     href: "/student_completed/1001"
   }, "Completed Sessions")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledDropdown"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownToggle"], {
     id: "Navbar-welcome",
@@ -25851,7 +25854,7 @@ function (_App) {
       }), __jsx("link", {
         rel: "stylesheet",
         href: "https://unpkg.com/react-day-picker/lib/style.css"
-      })), __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_11__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
+      })), __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_10__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
     }
   }], [{
     key: "getInitialProps",

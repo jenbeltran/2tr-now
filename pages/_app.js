@@ -45,7 +45,7 @@ class MyApp extends App {
 
 					<link rel="stylesheet" href="https://unpkg.com/react-day-picker/lib/style.css" />
 				</Head>
-				<TutorNavbar />
+				<StudentNavbar />
 				<Component {...pageProps} />
 				<Footer />
 			</div>

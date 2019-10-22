@@ -5,7 +5,7 @@ function getStudentPendingRoute(req, res, next) {
 	console.log(req.session.studentId);
 	db.query(
 		'SELECT * FROM session_request WHERE studentId=? AND completed=0',
-		[ req.body.studentId ],
+		[ req.params.id ],
 		(error, results, fields) => {
 			res.json(results);
 		}
