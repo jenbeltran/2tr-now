@@ -14,6 +14,7 @@ function postStudentRequestRoute(req, res, next) {
 			req.body.description
 		],
 		(error, results, fields) => {
+			console.log("Post student request route");
 			console.log(req.session.studentId);
 			res.json(results);
 		}

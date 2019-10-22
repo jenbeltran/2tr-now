@@ -9,6 +9,7 @@ function postStudentLoginRoute(req, res, next) {
 		} else {
 			req.session.studentId = results[0].studentId;
 			res.redirect('/student_dashboard/:id');
+			console.log("student login route:")
 			console.log(req.session);
 		}
 	});

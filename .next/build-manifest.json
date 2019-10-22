@@ -16,23 +16,19 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/request_details": [
+    "/tutor_active": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_active": [
+    "/tutor_completed": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_completed": [
+    "/tutor_dashboard": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_pending": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/student_request": [
+    "/tutor_pending": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

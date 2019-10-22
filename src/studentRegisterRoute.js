@@ -27,6 +27,10 @@ function postStudentRegisterRoute(req, res, next) {
 
 //student dashboard
 function getStudentRegisterRoute(req, res, next) {
+	console.log("Student register route");
+	console.log(req.res.sessionStore);
+	console.log("Session Store!");
+	console.log(req.sessionStore.MemoryStore);
 	db.query('SELECT * FROM students WHERE studentId=?', [ req.params.id ], (error, results, fields) => {
 		res.json(results);
 	});
