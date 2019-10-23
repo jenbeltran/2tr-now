@@ -19,6 +19,10 @@
     "/student_dashboard": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/student_pending": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

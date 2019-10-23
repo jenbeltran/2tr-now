@@ -58,8 +58,8 @@ app.prepare().then(() => {
 	router.post('/api/student_requests', studentRequestRoute.post);
 
 	// student to see list of pending requests - API and render routes
-	router.get('/api/student_pending/:id', studentPendingRoute.get);
-	router.get('/student_pending/:id', (req, res) => {
+	router.get('/api/student_pending/:studentId', studentPendingRoute.get);
+	router.get('/student_pending/:studentId', (req, res) => {
 		app.render(req, res, '/student_pending', { id: req.params.id, studentId: req.session.studentId });
 	});
 
@@ -131,7 +131,5 @@ app.prepare().then(() => {
 	//tutor to change active to completed
 	router.put('/api/request_details2/:id', requestDetailsRoute.put2);
 });
-
-
 
 module.exports = router;
