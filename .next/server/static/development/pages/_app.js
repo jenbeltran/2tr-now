@@ -2257,8 +2257,8 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    console.log('session from app.js');
-    console.log(ctx.req.session.studentId);
+    console.log('page props from app.js');
+    console.log(pageProps.studentId);
     return {
       pageProps
     };
@@ -2269,6 +2269,16 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       Component,
       pageProps
     } = this.props;
+    let chosenNavbar;
+
+    if (pageProps.studentId != null || undefined) {
+      chosenNavbar = __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_3__["default"], null);
+    } else if (pageProps.tutorId != null || undefined) {
+      chosenNavbar = __jsx(_components_navbars_TutorNavbar__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+    } else {
+      chosenNavbar = __jsx(_components_navbars_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+    }
+
     return __jsx("div", null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, null, __jsx("link", {
       rel: "stylesheet",
       href: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
@@ -2310,7 +2320,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     }), __jsx("link", {
       rel: "stylesheet",
       href: "https://unpkg.com/react-day-picker/lib/style.css"
-    })), __jsx(_components_navbars_StudentNavbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    })), chosenNavbar, __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
   }
 
 }

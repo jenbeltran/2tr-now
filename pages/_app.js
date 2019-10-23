@@ -12,13 +12,22 @@ class MyApp extends App {
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx);
 		}
-		console.log('session from app.js');
-		console.log(ctx.req.session.studentId);
+		console.log('page props from app.js');
+		console.log(pageProps.studentId);
 		return { pageProps };
 	}
 
 	render() {
 		const { Component, pageProps } = this.props;
+
+		let chosenNavbar;
+		if (pageProps.studentId != null || undefined) {
+			chosenNavbar = <StudentNavbar />;
+		} else if (pageProps.tutorId != null || undefined) {
+			chosenNavbar = <TutorNavbar />;
+		} else {
+			chosenNavbar = <Navbar />;
+		}
 
 		return (
 			<div>
@@ -47,7 +56,8 @@ class MyApp extends App {
 
 					<link rel="stylesheet" href="https://unpkg.com/react-day-picker/lib/style.css" />
 				</Head>
-				<StudentNavbar />
+
+				{chosenNavbar}
 				<Component {...pageProps} />
 				<Footer />
 			</div>

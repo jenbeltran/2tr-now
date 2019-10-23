@@ -8,8 +8,8 @@ function postStudentLoginRoute(req, res, next) {
 			res.redirect('/login');
 		} else {
 			req.session.studentId = results[0].studentId;
-		
-			console.log("student login route:")
+			res.redirect('/student_dashboard/:studentId');
+			console.log('student login route:');
 			console.log(req.session);
 		}
 	});
