@@ -25892,13 +25892,11 @@ function (_App) {
                 pageProps = _context.sent;
 
               case 6:
-                console.log('page props from app.js');
-                console.log(pageProps.studentId);
                 return _context.abrupt("return", {
                   pageProps: pageProps
                 });
 
-              case 9:
+              case 7:
               case "end":
                 return _context.stop();
             }

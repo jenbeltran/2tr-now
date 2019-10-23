@@ -32,7 +32,7 @@ const TutorDashboard = ({ posts }) => (
 								<CardTitle className="Dashboard-cardTitle">View Requests</CardTitle>
 								<CardImg
 									className="TutorDashboard-cardImg"
-									src={Eye} 
+									src={Eye}
 									alt="View/Accept Pending Requests"
 								/>
 							</CardBody>
@@ -57,7 +57,7 @@ const TutorDashboard = ({ posts }) => (
 );
 
 TutorDashboard.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/tutor/${query.id}`);
+	const { data } = await axios.get(`http://localhost:3000/api/tutor/${query.tutorId}`);
 	return { ...query, posts: data };
 };
 

@@ -12,8 +12,6 @@ class MyApp extends App {
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx);
 		}
-		console.log('page props from app.js');
-		console.log(pageProps.studentId);
 		return { pageProps };
 	}
 

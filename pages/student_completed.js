@@ -51,7 +51,7 @@ const StudentCompleted = ({ posts }) => {
 };
 
 StudentCompleted.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/student_completed/${query.id}`);
+	const { data } = await axios.get(`http://localhost:3000/api/student_completed/${query.studentId}`);
 	return { ...query, posts: data };
 };
 

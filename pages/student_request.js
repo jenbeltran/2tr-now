@@ -59,12 +59,7 @@ const StudentRequest = (event) => {
 				topic         : topic,
 				description   : description
 			})
-			.then(
-				Router.push({
-					pathname : '/student_pending',
-					query    : { id: studentId }
-				})
-			)
+			.then(Router.push(`/student_pending/${studentId}`))
 			.catch((err) => console.log(err));
 		console.log(studentId, program, subject, language, sessionLength, topic, description);
 	};
@@ -108,8 +103,6 @@ const StudentRequest = (event) => {
 						</td>
 					</tr>
 				</table>
-				<p className="Profile-p">Student ID:</p>
-				<textarea rows="1" cols="50" name="studentId" value={studentId} onChange={handleChangeStudentId} />
 				<p className="Profile-p">Topic:</p>
 				<textarea rows="1" cols="50" name="topic" value={topic} onChange={handleChangeTopic} />
 				<p className="Profile-p">Description:</p>

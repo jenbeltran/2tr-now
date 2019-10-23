@@ -9,7 +9,7 @@ function postTutorLoginRoute(req, res, next) {
 			res.redirect('/login');
 		} else {
 			req.session.tutorId = results[0].tutorId;
-			res.redirect('/tutor_dashboard/:id');
+			res.redirect('/tutor_dashboard/:tutorId');
 			console.log(req.session);
 		}
 	});

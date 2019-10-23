@@ -4,7 +4,7 @@ const db = require('../db/database');
 function getStudentCompletedRoute(req, res, next) {
 	db.query(
 		'SELECT * FROM session_request WHERE studentId=? AND completed=2 ',
-		[ req.params.id ],
+		[ req.params.studentId ],
 		(error, results, fields) => {
 			res.json(results);
 		}

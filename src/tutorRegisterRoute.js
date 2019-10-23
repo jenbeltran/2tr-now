@@ -29,7 +29,7 @@ function postTutorRegisterRoute(req, res, next) {
 
 //student dashboard
 function getTutorRegisterRoute(req, res, next) {
-	db.query('SELECT * FROM tutors WHERE tutorId=?', [ req.params.id ], (error, results, fields) => {
+	db.query('SELECT * FROM tutors WHERE tutorId=?', [ req.params.tutorId ], (error, results, fields) => {
 		res.json(results);
 	});
 }

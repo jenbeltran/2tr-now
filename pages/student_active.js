@@ -2,7 +2,6 @@ import axios from 'axios';
 import { Container } from 'reactstrap';
 import BlueEye from '../static/blueeye.png';
 
-
 const StudentActive = ({ posts }) => {
 	return (
 		<div>
@@ -50,8 +49,7 @@ const StudentActive = ({ posts }) => {
 };
 
 StudentActive.getInitialProps = async ({ query }) => {
-	console.log(query);
-	const { data } = await axios.get(`http://localhost:3000/api/student_active/${query.id}`);
+	const { data } = await axios.get(`http://localhost:3000/api/student_active/${query.studentId}`);
 	return { ...query, posts: data };
 };
 export default StudentActive;

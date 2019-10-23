@@ -64,14 +64,14 @@ app.prepare().then(() => {
 	});
 
 	// student to see list of active requests - API and render routes
-	router.get('/api/student_active/:id', studentActiveRoute.get);
-	router.get('/student_active/:id', (req, res) => {
-		app.render(req, res, '/student_active', { id: req.params.id });
+	router.get('/api/student_active/:studentId', studentActiveRoute.get);
+	router.get('/student_active/:studentId', (req, res) => {
+		app.render(req, res, '/student_active', { id: req.params.id, studentId: req.session.studentId });
 	});
 
 	//student to see completed sessions
-	router.get('/api/student_completed/:id', studentCompletedRoute.get);
-	router.get('/student_completed/:id', (req, res) => {
+	router.get('/api/student_completed/:studentId', studentCompletedRoute.get);
+	router.get('/student_completed/:studentId', (req, res) => {
 		app.render(req, res, '/student_completed', { id: req.params.id, studentId: req.session.studentId });
 	});
 
@@ -83,9 +83,9 @@ app.prepare().then(() => {
 	router.post('/api/tutor', tutorRegisterRoute.post);
 
 	//tutor dashboard route
-	router.get('/api/tutor/:id', tutorRegisterRoute.get);
-	router.get('/tutor_dashboard/:id', (req, res) => {
-		app.render(req, res, '/tutor_dashboard', { id: req.params.id });
+	router.get('/api/tutor/:tutorId', tutorRegisterRoute.get);
+	router.get('/tutor_dashboard/:tutorId', (req, res) => {
+		app.render(req, res, '/tutor_dashboard', { id: req.params.id, tutorId: req.session.tutorId });
 	});
 
 	//tutor profile page
@@ -119,7 +119,7 @@ app.prepare().then(() => {
 	//to see the details of each ticket request - API and render route
 	router.get('/api/request_details/:id', requestDetailsRoute.get);
 	router.get('/request_details/:id', (req, res) => {
-		app.render(req, res, '/request_details', { id: req.params.id });
+		app.render(req, res, '/request_details', { id: req.params.id, studentId: req.session.studentId });
 	});
 
 	//tutor to change pending request to active

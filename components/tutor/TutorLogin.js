@@ -3,14 +3,14 @@ import axios from 'axios';
 import Router from 'next/router';
 import { Button } from 'reactstrap';
 
-const TutorLogin = () => {
+const TutorLogin = ({ query }) => {
 	const [ tutorEmail, setTutorEmail ] = useState();
 	const [ password, setPassword ] = useState();
-	const [ id, setId ] = useState();
+	const [ tutorId, setTutorId ] = useState();
 
 	const handleChangeTutorEmail = (e) => {
 		setTutorEmail(e.target.value);
-		setId(2000);
+		setTutorId(query);
 	};
 
 	const handleChangePassword = (e) => {
@@ -24,7 +24,7 @@ const TutorLogin = () => {
 				password   : password
 			})
 			.then((res) => console.log(res))
-			.then(Router.push(`/tutor_dashboard/${id}`))
+			.then(Router.push(`/tutor_dashboard/${tutorId}`))
 			.catch((err) => console.log(err));
 	};
 	return (
