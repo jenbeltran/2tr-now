@@ -5,14 +5,11 @@ import Modal from '../components/Modal';
 import Placeholder from '../static/placeholder.png';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
-import SpecialtyBusiness from '../components/specialty/SpecialtyBusiness';
-import SpecialtyMath from '../components/specialty/SpecialtyMath';
-import SpecialtyLanguage from '../components/specialty/SpecialtyLanguage';
-import SpecialtyOther from '../components/specialty/SpecialtyOther';
-import SpecialtyScience from '../components/specialty/SpecialtyScience';
+import TutorNavbar from '../components/navbars/TutorNavbar';
 
 const TutorProfile = ({ posts }) => (
 	<div>
+		<TutorNavbar />
 		{posts.map((requests) => (
 			<table key={requests.tutorId} className="profile-table">
 				<tr>

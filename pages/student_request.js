@@ -10,6 +10,7 @@ import SpecialtyOther from '../components/specialty/SpecialtyOther';
 import SpecialtyScience from '../components/specialty/SpecialtyScience';
 import Language from '../components/Language';
 import Time from '../components/Time';
+import StudentNavbar from '../components/navbars/StudentNavbar';
 
 const StudentRequest = (event) => {
 	const [ studentId, setStudentId ] = useState();
@@ -79,6 +80,7 @@ const StudentRequest = (event) => {
 
 	return (
 		<div>
+			<StudentNavbar />
 			<h1>Create a New Tutor Request</h1>
 			<Container>
 				<table>

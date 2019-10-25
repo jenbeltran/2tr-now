@@ -4,15 +4,17 @@ import Modal from '../components/Modal';
 import Placeholder from '../static/placeholder.png';
 import Countries from '../components/Countries';
 import Programs from '../components/Program';
+import StudentNavbar from '../components/navbars/StudentNavbar';
 
 const StudentProfile = ({ posts }) => (
 	<div>
+		<StudentNavbar />
 		{posts.map((requests) => (
 			<table key={requests.studentId} className="profile-table">
 				<tr>
 					<td>
 						<Modal
-							modalButton={<img src={Placeholder} alt="placeholder" className="modal-img"/>}
+							modalButton={<img src={Placeholder} alt="placeholder" className="modal-img" />}
 							modalHeader={'Profile Photo Upload'}
 							modalBody={'Please upload a profile photo'}
 						/>

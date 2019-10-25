@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { Container, Button } from 'reactstrap';
 import BlueEye from '../static/blueeye.png';
+import TutorNavbar from '../components/navbars/TutorNavbar';
 
 const TutorPending = ({ posts }) => {
 	return (
 		<div>
+			<TutorNavbar />
 			<Container>
 				<h1>View Pending Requests</h1>
 
@@ -32,7 +34,7 @@ const TutorPending = ({ posts }) => {
 									<td>{requests.topic}</td>
 									<td>{requests.sessionLength}</td>
 									<td>
-										<a href={`/request_details/${requests.requestId}`}>
+										<a href={`/request_details_tutor/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
 									</td>

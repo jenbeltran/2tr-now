@@ -4,9 +4,11 @@ import { Container, Card, CardImg, CardTitle, CardDeck, CardBody } from 'reactst
 import Placeholder from '../static/placeholder.png';
 import Eye from '../static/eye.png';
 import Checkmark from '../static/checkmark.png';
+import TutorNavbar from '../components/navbars/TutorNavbar';
 
 const TutorDashboard = ({ posts }) => (
 	<div>
+		<TutorNavbar />
 		{posts.map((requests) => (
 			<table key={requests.tutorId} className="Dashboard-table">
 				<tbody>

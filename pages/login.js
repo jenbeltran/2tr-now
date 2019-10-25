@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from 'reactstrap';
 import StudentLogin from '../components/student/StudentLogin';
 import TutorLogin from '../components/tutor/TutorLogin';
+import RegNavbar from '../components/navbars/Navbar';
 
 const Login = () => {
 	const [ radio, setRadio ] = useState('student');
@@ -16,9 +17,16 @@ const Login = () => {
 
 	return (
 		<div>
+			<RegNavbar />
 			<h1 className="Login-h1">Welcome Back!</h1>
 			<div>
-				<input type="radio" className="radio-option" name="radio-group" value="student" onClick={radioStudent} />
+				<input
+					type="radio"
+					className="radio-option"
+					name="radio-group"
+					value="student"
+					onClick={radioStudent}
+				/>
 				<label htmlFor="student">Student?</label>
 				<input type="radio" className="radio-option1" name="radio-group" value="tutor" onClick={radioTutor} />
 				<label htmlFor="tutor">Tutor?</label>

@@ -59,7 +59,7 @@ const StudentNavbar = () => {
 						</NavItem>
 						<UncontrolledDropdown>
 							<DropdownToggle id="Navbar-welcome" nav caret>
-								Welcome, testing!
+								Welcome!
 							</DropdownToggle>
 							<DropdownMenu right>
 								<DropdownItem href="/student_profile/1001">View Profile</DropdownItem>

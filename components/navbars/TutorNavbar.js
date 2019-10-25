@@ -53,7 +53,7 @@ const TutorNavbar = (props) => {
 						</NavItem>
 						<UncontrolledDropdown>
 							<DropdownToggle id="Navbar-welcome" nav caret>
-								Welcome, Mike!
+								Welcome!
 							</DropdownToggle>
 							<DropdownMenu right>
 								<DropdownItem href="/tutor_profile/2000">View Profile</DropdownItem>

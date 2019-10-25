@@ -217,7 +217,7 @@ const StudentNavbar = () => {
     id: "Navbar-welcome",
     nav: true,
     caret: true
-  }, "Welcome, testing!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
+  }, "Welcome!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
     right: true
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/student_profile/1001"
@@ -290,7 +290,7 @@ const TutorNavbar = props => {
     id: "Navbar-welcome",
     nav: true,
     caret: true
-  }, "Welcome, Mike!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
+  }, "Welcome!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
     right: true
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/tutor_profile/2000"
@@ -2318,7 +2318,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
     }), __jsx("link", {
       rel: "stylesheet",
       href: "https://unpkg.com/react-day-picker/lib/style.css"
-    })), chosenNavbar, __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    })), __jsx(Component, pageProps), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], null));
   }
 
 }

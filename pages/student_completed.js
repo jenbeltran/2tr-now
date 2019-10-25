@@ -2,10 +2,12 @@ import axios from 'axios';
 import { Container } from 'reactstrap';
 import BlueEye from '../static/blueeye.png';
 import StudentRateModal from '../components/StudentRateModal';
+import StudentNavbar from '../components/navbars/StudentNavbar';
 
 const StudentCompleted = ({ posts }) => {
 	return (
 		<div>
+			<StudentNavbar />
 			<Container>
 				<h1>Completed Tutor Sessions</h1>
 
@@ -35,7 +37,7 @@ const StudentCompleted = ({ posts }) => {
 									<td>{requests.sessionLength}</td>
 									<td>{requests.tutorId}</td>
 									<td>
-										<a href={`/request_details/${requests.requestId}`}>
+										<a href={`/request_details_student/${requests.requestId}`}>
 											<img src={BlueEye} alt="View Details" width="35px" />
 										</a>
 										<StudentRateModal />

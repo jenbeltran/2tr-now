@@ -118,8 +118,11 @@ app.prepare().then(() => {
 
 	//to see the details of each ticket request - API and render route
 	router.get('/api/request_details/:id', requestDetailsRoute.get);
-	router.get('/request_details/:id', (req, res) => {
-		app.render(req, res, '/request_details', { id: req.params.id, studentId: req.session.studentId });
+	router.get('/request_details_student/:id', (req, res) => {
+		app.render(req, res, '/request_details_student', { id: req.params.id, studentId: req.session.studentId });
+	});
+	router.get('/request_details_tutor/:id', (req, res) => {
+		app.render(req, res, '/request_details_tutor', { id: req.params.id, tutorId: req.session.tutorId });
 	});
 
 	//tutor to change pending request to active

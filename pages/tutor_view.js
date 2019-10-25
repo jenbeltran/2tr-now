@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { Container } from 'reactstrap';
 import Placeholder from '../static/placeholder.png';
+import StudentNavbar from '../components/navbars/StudentNavbar';
 
 const ViewTutorProfile = ({ posts }) => (
 	<div>
+		<StudentNavbar />
 		{posts.map((requests) => (
 			<table key={requests.tutorId} className="Dashboard-table">
 				<tr>

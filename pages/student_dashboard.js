@@ -5,9 +5,11 @@ import Placeholder from '../static/placeholder.png';
 import Add from '../static/add.png';
 import Eye from '../static/eye.png';
 import Checkmark from '../static/checkmark.png';
+import StudentNavbar from '../components/navbars/StudentNavbar';
 
 const StudentDashboard = ({ posts }) => (
 	<div>
+		<StudentNavbar />
 		{posts.map((requests) => (
 			<table key={requests.studentId} className="Dashboard-table">
 				<tr>
