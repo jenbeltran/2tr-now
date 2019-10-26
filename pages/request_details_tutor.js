@@ -10,7 +10,7 @@ const RequestDetailsTutor = ({ posts }) => {
 		console.log('Complete Session');
 		axios
 			.put(`http://localhost:3000/api/request_details2/${id}`)
-			.then(Router.push(`/request_details/${id}`))
+			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
 
@@ -19,7 +19,7 @@ const RequestDetailsTutor = ({ posts }) => {
 		console.log('Accept Session');
 		axios
 			.put(`http://localhost:3000/api/request_details/${id}`)
-			.then(Router.push(`/request_details/${id}`))
+			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
 

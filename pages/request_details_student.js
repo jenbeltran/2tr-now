@@ -10,7 +10,7 @@ const RequestDetailsStudent = ({ posts }) => {
 		console.log('Complete Session');
 		axios
 			.put(`http://localhost:3000/api/request_details2/${id}`)
-			.then(Router.push(`/request_details/${id}`))
+			.then(Router.push(`/request_details_student/${id}`))
 			.catch((err) => console.log(err));
 	};
 
