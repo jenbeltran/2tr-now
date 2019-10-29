@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+    nodeapp:
+      container_name: api-tutor
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - "4444:3000"
+      depends_on:
+        - db
+      environment:
+          DATABASE_HOST: "cloudsql"
+          DATABASE_USER: "user"
+          DATABASE_PASSWORD: "user"
+          DATABASE_NAME: "tutornow"        
+        
+    db:
+      image: "mysql:5.7"
+      environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: "db"
+            MYSQL_USER: user
+            MYSQL_PASSWORD: user
+      ports: 
+        - "9000:3306"

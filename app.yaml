@@ -1,0 +1,12 @@
+runtime: custom
+env: flex
+
+env_variables:
+  DATABASE_HOST: "cloudsql"
+  DATABASE_USER: "user"
+  DATABASE_PASSWORD: "user"
+  DATABASE_NAME: "tutornow"
+
+beta_settings:
+  cloud_sql_instances: tr-now:us-east1:tutor-now=tcp:3306
+

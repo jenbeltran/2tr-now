@@ -1,0 +1,9 @@
+runtime: custom
+env: flex
+env_variables:
+  DATABASE_HOST: ${DATABASE_HOST}
+  DATABASE_USER: ${DATABASE_USER}
+  DATABASE_PASSWORD: ${DATABASE_PASS}
+  DATABASE_NAME: ${DATABASE_NAME}
+beta_settings:
+  cloud_sql_instances: ${DATABASE_INSTANCE}=tcp:3306
