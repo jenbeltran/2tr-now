@@ -30,6 +30,7 @@ let tutorCompletedRoute = require('./tutorCompletedRoute');
 
 // Routes
 let requestDetailsRoute = require('./requestDetailsRoute');
+let deleteRequestRoute = require('./deleteRequestRoute');
 
 app.prepare().then(() => {
 	//student login route
@@ -134,5 +135,6 @@ app.prepare().then(() => {
 	//tutor to change active to completed
 	router.put('/api/request_details2/:id', requestDetailsRoute.put2);
 });
+
 
 module.exports = router;
