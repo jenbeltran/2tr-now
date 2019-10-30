@@ -12,23 +12,23 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/request_details_student": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/student_active": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-<<<<<<< HEAD
     "/login": [
-=======
-    "/student_pending": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/student_request": [
->>>>>>> 6853f197c940e5de4c0a4e019153b70943007d31
+    "/tutor_active": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_completed": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_dashboard": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_pending": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
