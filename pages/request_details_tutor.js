@@ -10,7 +10,7 @@ const RequestDetailsTutor = ({ posts }) => {
 		console.log('Complete Session');
 		axios
 			.put(`http://localhost:3000/api/request_details2/${id}`)
-			.then(Router.push(`/request_details/${id}`))
+			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
 
@@ -18,8 +18,8 @@ const RequestDetailsTutor = ({ posts }) => {
 		let id = posts[0].requestId;
 		console.log('Accept Session');
 		axios
-			.put(`http://localhost:3000/api/request_details/${id}`)
-			.then(Router.push(`/request_details/${id}`))
+			.put(`http://localhost:3000/api/request_details_tutor/${id}`)
+			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
 
@@ -46,7 +46,7 @@ const RequestDetailsTutor = ({ posts }) => {
 			))}
 			{posts.map((requests) => (
 				<div key={requests.requestId} className="RequestDetails-div1">
-					<a href="/student_view/1001">
+					<a href={`/student_profile/${requests.studentId}`}>
 						<h6>{requests.studentId}</h6>
 					</a>
 					<h6>PROGRAM: {requests.program}</h6>
@@ -56,19 +56,13 @@ const RequestDetailsTutor = ({ posts }) => {
 					<p>{requests.description}</p>
 				</div>
 			))}
-			<div className="RequestDetails-div2">
-				<a href="/tutor_view/2000">
-					<h6>MIKE JONES</h6>
-				</a>
-				<h6>REPLY:</h6>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum
-				</p>
-			</div>
+			{posts.map((requests) => (
+				<div key={requests.requestId} className="RequestDetails-div2">
+					<a href={`/tutor_profile/${requests.tutorId}`}>
+						<h6>{requests.tutorId}</h6>
+					</a>
+				</div>
+			))}
 
 			<ReplyModal />
 		</div>

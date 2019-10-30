@@ -32,7 +32,7 @@ const TutorNavbar = (props) => {
 				<Collapse isOpen={dropdown} navbar>
 					<Nav className="ml-auto" navbar>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/tutor_dashboard/2000">
+							<NavLink className="Navbar-link" href={`/tutor_dashboard/${props.value}`}>
 								Dashboard
 							</NavLink>
 						</NavItem>
@@ -47,7 +47,7 @@ const TutorNavbar = (props) => {
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/tutor_completed/2000">
+							<NavLink className="Navbar-link" href={`/tutor_completed/${props.value}`}>
 								Completed Sessions
 							</NavLink>
 						</NavItem>
@@ -56,7 +56,7 @@ const TutorNavbar = (props) => {
 								Welcome!
 							</DropdownToggle>
 							<DropdownMenu right>
-								<DropdownItem href="/tutor_profile/2000">View Profile</DropdownItem>
+								<DropdownItem href={`/tutor_profile/${props.value}`}>View Profile</DropdownItem>
 								<DropdownItem href="/">Logout</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>

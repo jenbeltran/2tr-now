@@ -9,7 +9,7 @@ import StudentNavbar from '../components/navbars/StudentNavbar';
 
 const StudentDashboard = ({ posts }) => (
 	<div>
-		<StudentNavbar />
+		{posts.map((requests) => <StudentNavbar key={requests.studentId} value={requests.studentId} />)}
 		{posts.map((requests) => (
 			<table key={requests.studentId} className="Dashboard-table">
 				<tr>

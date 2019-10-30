@@ -8,7 +8,7 @@ import TutorNavbar from '../components/navbars/TutorNavbar';
 
 const TutorDashboard = ({ posts }) => (
 	<div>
-		<TutorNavbar />
+		{posts.map((requests) => <TutorNavbar key={requests.tutorId} value={requests.tutorId} />)}
 		{posts.map((requests) => (
 			<table key={requests.tutorId} className="Dashboard-table">
 				<tbody>

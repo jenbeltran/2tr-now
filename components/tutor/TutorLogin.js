@@ -32,9 +32,15 @@ const TutorLogin = ({ query }) => {
 			<div className="Login-div">
 				<form>
 					<p className="Login-p">Tutor Email:</p>
-					<input type="email" value={tutorEmail} onChange={handleChangeTutorEmail} />
+					<input className="Login-input" type="email" value={tutorEmail} onChange={handleChangeTutorEmail} />
 					<p className="Login-p">Tutor Password:</p>
-					<input type="password" name="password" value={password} onChange={handleChangePassword} />
+					<input
+						className="Login-input"
+						type="password"
+						name="password"
+						value={password}
+						onChange={handleChangePassword}
+					/>
 				</form>
 			</div>
 			<Button className="Login-button1" onClick={handleSubmit} outline>

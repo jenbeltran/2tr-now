@@ -172,7 +172,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const StudentNavbar = () => {
+const StudentNavbar = props => {
   const {
     0: dropdown,
     1: setDropdown
@@ -200,19 +200,19 @@ const StudentNavbar = () => {
     navbar: true
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/student_dashboard/1001"
+    href: `/student_dashboard/${props.value}`
   }, "Dashboard")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
     href: "/student_request"
   }, "New Request")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/student_pending/1001"
+    href: `/student_pending/${props.value}`
   }, "Pending Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/student_active/1001"
+    href: `/student_active/${props.value}`
   }, "Active Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/student_completed/1001"
+    href: `/student_completed/${props.value}`
   }, "Completed Sessions")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledDropdown"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownToggle"], {
     id: "Navbar-welcome",
     nav: true,
@@ -220,7 +220,7 @@ const StudentNavbar = () => {
   }, "Welcome!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
     right: true
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
-    href: "/student_profile/1001"
+    href: `/student_profile/${props.value}`
   }, "View Profile"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/"
   }, "Logout")))))));
@@ -276,7 +276,7 @@ const TutorNavbar = props => {
     navbar: true
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/tutor_dashboard/2000"
+    href: `/tutor_dashboard/${props.value}`
   }, "Dashboard")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
     href: "/tutor_pending"
@@ -285,7 +285,7 @@ const TutorNavbar = props => {
     href: "/tutor_active"
   }, "Active Requests")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
     className: "Navbar-link",
-    href: "/tutor_completed/2000"
+    href: `/tutor_completed/${props.value}`
   }, "Completed Sessions")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["UncontrolledDropdown"], null, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownToggle"], {
     id: "Navbar-welcome",
     nav: true,
@@ -293,7 +293,7 @@ const TutorNavbar = props => {
   }, "Welcome!"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownMenu"], {
     right: true
   }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
-    href: "/tutor_profile/2000"
+    href: `/tutor_profile/${props.value}`
   }, "View Profile"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_1__["DropdownItem"], {
     href: "/"
   }, "Logout")))))));

@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import Link from 'next/link';
 
-const StudentNavbar = () => {
+const StudentNavbar = (props) => {
 	const [ dropdown, setDropdown ] = useState(false);
 
 	const handleToggle = () => {
@@ -33,7 +33,7 @@ const StudentNavbar = () => {
 				<Collapse isOpen={dropdown} navbar>
 					<Nav className="ml-auto" navbar>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/student_dashboard/1001">
+							<NavLink className="Navbar-link" href={`/student_dashboard/${props.value}`}>
 								Dashboard
 							</NavLink>
 						</NavItem>
@@ -43,17 +43,17 @@ const StudentNavbar = () => {
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/student_pending/1001">
+							<NavLink className="Navbar-link" href={`/student_pending/${props.value}`}>
 								Pending Requests
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/student_active/1001">
+							<NavLink className="Navbar-link" href={`/student_active/${props.value}`}>
 								Active Requests
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className="Navbar-link" href="/student_completed/1001">
+							<NavLink className="Navbar-link" href={`/student_completed/${props.value}`}>
 								Completed Sessions
 							</NavLink>
 						</NavItem>
@@ -62,7 +62,7 @@ const StudentNavbar = () => {
 								Welcome!
 							</DropdownToggle>
 							<DropdownMenu right>
-								<DropdownItem href="/student_profile/1001">View Profile</DropdownItem>
+								<DropdownItem href={`/student_profile/${props.value}`}>View Profile</DropdownItem>
 								<DropdownItem href="/">Logout</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>
