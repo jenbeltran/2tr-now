@@ -106,9 +106,9 @@ app.prepare().then(() => {
 	});
 
 	// tutor to see list of active requests - API and render routes
-	router.get('/api/tutor_active/:id', tutorActiveRoute.get);
-	router.get('/tutor_active', (req, res) => {
-		app.render(req, res, '/tutor_active', { id: req.params.id });
+	router.get('/api/tutor_active/:tutorId', tutorActiveRoute.get);
+	router.get('/tutor_active/:tutorId', (req, res) => {
+		app.render(req, res, '/tutor_active', { id: req.params.id, tutorId: req.session.tutorId });
 	});
 
 	//tutor to see completed sessions
