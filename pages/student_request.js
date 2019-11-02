@@ -51,7 +51,7 @@ const StudentRequest = (event) => {
 
 	const handleSubmit = (event) => {
 		axios
-			.post('http://localhost:3000/api/student_requests', {
+			.post('http://localhost:8080/api/student_requests', {
 				studentId     : studentId,
 				program       : program,
 				subject       : subject,

@@ -79,7 +79,7 @@ const TutorProfile = ({ posts }) => (
 );
 
 TutorProfile.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/tutor/${query.id}`);
+	const { data } = await axios.get(`http://localhost:8080/api/tutor/${query.id}`);
 	return { ...query, posts: data };
 };
 

@@ -1,32 +1,110 @@
 {
-  "devFiles": [
-    "static/development/dll/dll_397dc449097af0b4e992.js",
-    "static/development/dll/dll_397dc449097af0b4e992.js.map"
-  ],
+  "devFiles": [],
   "pages": {
+    "/": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
     ],
     "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/login": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/register": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
     ],
     "/request_details_student": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/request_details_tutor": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
     ],
     "/student_active": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/student_completed": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/student_dashboard": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
     ],
     "/student_pending": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/student_profile": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
     ],
     "/student_request": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/student_view": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/tutor_active": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/tutor_completed": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/tutor_dashboard": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/tutor_pending": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/tutor_profile": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
+    ],
+    "/tutor_view": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.32694fff379b21716e10.js",
+      "static/runtime/main-3a48328dd9876e757a10.js"
     ]
   }
 }

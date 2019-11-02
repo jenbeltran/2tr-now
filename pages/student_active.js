@@ -51,7 +51,7 @@ const StudentActive = ({ posts }) => {
 };
 
 StudentActive.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/student_active/${query.studentId}`);
+	const { data } = await axios.get(`http://localhost:8080/api/student_active/${query.studentId}`);
 	return { ...query, posts: data };
 };
 export default StudentActive;

@@ -46,7 +46,7 @@ const StudentRegister = () => {
 	const handleSubmit = () => {
 		let stringDate = dob.toLocaleDateString();
 		axios
-			.post('http://localhost:3000/api/student', {
+			.post('http://localhost:8080/api/student', {
 				studentEmail : studentEmail,
 				firstName    : firstName,
 				lastName     : lastName,

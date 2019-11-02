@@ -1,23 +1,23 @@
-require('dotenv').config();
+// require('dotenv').config();
 
-//mysql db
-const mysql = require('mysql');
+// //mysql db
+// const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-	host     : process.env.DB_HOST,
-	user     : process.env.DB_USER,
-	password : process.env.DB_PASSWORD,
-	database : process.env.DB_NAME,
-	port     : 3306
-});
+// const connection = mysql.createConnection({
+// 	host     : process.env.DB_HOST,
+// 	user     : process.env.DB_USER,
+// 	password : process.env.DB_PASSWORD,
+// 	database : process.env.DB_NAME,
+// 	port     : 3306
+// });
 
-connection.connect((err) => {
-	if (!err) {
-		console.log('db is connected');
-	} else {
-		console.log('db connection failed');
-		console.log(err);
-	}
-});
+// connection.connect((err) => {
+// 	if (!err) {
+// 		console.log('db is connected');
+// 	} else {
+// 		console.log('db connection failed');
+// 		console.log(err);
+// 	}
+// });
 
-module.exports = connection;
+// module.exports = connection;

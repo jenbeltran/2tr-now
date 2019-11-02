@@ -49,7 +49,7 @@ const TutorPending = ({ posts }) => {
 };
 
 TutorPending.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/tutor_pending/${query.id}`);
+	const { data } = await axios.get(`http://localhost:8080/api/tutor_pending/${query.id}`);
 	return { ...query, posts: data };
 };
 

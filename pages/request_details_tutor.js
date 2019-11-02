@@ -9,7 +9,7 @@ const RequestDetailsTutor = ({ posts }) => {
 		let id = posts[0].requestId;
 		console.log('Complete Session');
 		axios
-			.put(`http://localhost:3000/api/request_details2/${id}`)
+			.put(`http://localhost:8080/api/request_details2/${id}`)
 			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
@@ -18,7 +18,7 @@ const RequestDetailsTutor = ({ posts }) => {
 		let id = posts[0].requestId;
 		console.log('Accept Session');
 		axios
-			.put(`http://localhost:3000/api/request_details/${id}`)
+			.put(`http://localhost:8080/api/request_details/${id}`)
 			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
@@ -76,7 +76,7 @@ const RequestDetailsTutor = ({ posts }) => {
 };
 
 RequestDetailsTutor.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/request_details/${query.id}`);
+	const { data } = await axios.get(`http://localhost:8080/api/request_details/${query.id}`);
 	return { ...query, posts: data };
 };
 

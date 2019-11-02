@@ -68,7 +68,7 @@ const StudentProfile = ({ posts }) => (
 );
 
 StudentProfile.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/student/${query.id}`);
+	const { data } = await axios.get(`http://localhost:8080/api/student/${query.id}`);
 	return { ...query, posts: data };
 };
 

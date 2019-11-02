@@ -19,7 +19,7 @@ const StudentLogin = ({ query }) => {
 
 	const handleSubmit = () => {
 		axios
-			.post('http://localhost:3000/api/student_login', {
+			.post('/api/student_login', {
 				studentEmail : studentEmail,
 				password     : password
 			})

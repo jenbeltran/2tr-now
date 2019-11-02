@@ -53,7 +53,7 @@ const TutorCompleted = ({ posts }) => {
 };
 
 TutorCompleted.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/tutor_completed/${query.id}`);
+	const { data } = await axios.get(`http://localhost:8080/api/tutor_completed/${query.id}`);
 	return { ...query, posts: data };
 };
 export default TutorCompleted;

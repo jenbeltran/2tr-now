@@ -53,7 +53,7 @@ const StudentPending = ({ posts }) => {
 };
 
 StudentPending.getInitialProps = async ({ query }) => {
-	const { data } = await axios.get(`http://localhost:3000/api/student_pending/${query.studentId}`);
+	const { data } = await axios.get(`http://localhost:8080/api/student_pending/${query.studentId}`);
 	return { ...query, posts: data };
 };
 

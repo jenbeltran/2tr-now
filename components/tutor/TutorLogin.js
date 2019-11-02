@@ -19,7 +19,7 @@ const TutorLogin = ({ query }) => {
 
 	const handleSubmit = () => {
 		axios
-			.post('http://localhost:3000/api/tutor_login', {
+			.post('http://localhost:8080/api/tutor_login', {
 				tutorEmail : tutorEmail,
 				password   : password
 			})
@@ -32,9 +32,20 @@ const TutorLogin = ({ query }) => {
 			<div className="Login-div">
 				<form>
 					<p className="Login-p">Tutor Email:</p>
-					<input type="email" value={tutorEmail} onChange={handleChangeTutorEmail} />
+					<input
+						type="email" 
+						className="Login-input"
+						value={tutorEmail} 
+						onChange={handleChangeTutorEmail} 
+					/>
 					<p className="Login-p">Tutor Password:</p>
-					<input type="password" name="password" value={password} onChange={handleChangePassword} />
+					<input 
+						type="password" 
+						className="Login-input"
+						name="password" 
+						value={password} 
+						onChange={handleChangePassword} 
+					/>
 				</form>
 			</div>
 			<Button className="Login-button1" onClick={handleSubmit} outline>
