@@ -17,7 +17,7 @@ const RequestDetailsStudent = ({ posts }) => {
 	let sessionTag;
 	if (posts[0].completed === 2) {
 		console.log(posts[0].completed);
-		sessionTag = <h1>Completed</h1>;
+		sessionTag = <h2>Completed</h2>;
 	} else {
 		console.log(posts[0].completed);
 		sessionTag = <Button onClick={completeSession}>Complete Session</Button>;
@@ -46,6 +46,7 @@ const RequestDetailsStudent = ({ posts }) => {
 			))}
 			{posts.map((requests) => (
 				<div className="RequestDetails-div2">
+					<p>Tutor Assigned to Request:</p>
 					<a href={`/tutor_profile/${requests.tutorId}`}>
 						<h6>{requests.tutorId}</h6>
 					</a>

@@ -4,6 +4,10 @@
     "static/development/dll/dll_397dc449097af0b4e992.js.map"
   ],
   "pages": {
+    "/": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -12,11 +16,47 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/login": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/tutor_active": [
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/request_details_student": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/request_details_tutor": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_active": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_completed": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_dashboard": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_pending": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_profile": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/student_request": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -29,6 +69,10 @@
       "static/runtime/main.js"
     ],
     "/tutor_pending": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/tutor_profile": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

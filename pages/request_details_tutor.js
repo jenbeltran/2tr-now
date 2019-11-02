@@ -18,11 +18,7 @@ const RequestDetailsTutor = ({ posts }) => {
 		let id = posts[0].requestId;
 		console.log('Accept Session');
 		axios
-<<<<<<< HEAD
-			.put(`http://localhost:3000/api/request_details_tutor/${id}`)
-=======
 			.put(`http://localhost:3000/api/request_details/${id}`)
->>>>>>> 6853f197c940e5de4c0a4e019153b70943007d31
 			.then(Router.push(`/request_details_tutor/${id}`))
 			.catch((err) => console.log(err));
 	};
